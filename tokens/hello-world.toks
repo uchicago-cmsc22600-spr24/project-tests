@@ -1,0 +1,4 @@
+do                      [hello-world.ov:1.1-2] 
+LID                     [hello-world.ov:1.4-8] 
+STRING                  [hello-world.ov:1.10-24] 
+EOF                     [hello-world.ov:3.1-0] 
