@@ -1,0 +1,19 @@
+/* a file that contains examples of all of the Ovid tokens */
+case do else end fun
+if in instance let of
+overload then type
+( )
+[ ]
+{ }
+&&
+||
+=
+== != <= =
++ - * / %
+, : | -> =>
+anIdentifier
+AN_IDENTIFIER
+42
+""
+"hello world"
+
