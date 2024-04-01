@@ -1,0 +1,45 @@
+/* the "dot-product" example from the Overview document */
+
+type Vec2 = V2 of Int Int
+type Vec3 = V3 of Int Int Int
+
+overload dot : a -> a -> Int
+
+fun v2dot u v = case u of
+      { V2 x1 y1 => case v of
+        { V2 x2 y2 => x1 * x2 + y1 * y2 }
+        end }
+      end
+instance dot : Vec2 -> Vec2 -> Int = v2dot
+
+fun v3dot u v = case u of
+      { V3 x1 y1 z1 => case v of
+        { V3 x2 y2 z1 => x1 * x2 + y1 * y2 + z1 * z2 }
+        end }
+      end
+instance dot : Vec3 -> Vec3 -> Int = v3dot
+
+/* the square of a vector's length */
+fun length2 u = dot u u
+
+do case arguments of
+    { Cons x args => case args of
+      { Cons y args => case args of
+        { Nil =>
+            do print "length^2 = "
+            do print (toString (length2 (V2 x y)))
+            in print "\n"
+        }
+        { Cons z args =>
+            do print "length^2 = "
+            do print (toString (length2 (V3 x y z)))
+            in print "\n"
+        }
+        end
+      }
+      { Nil => fail "missing arguments\n" }
+      end
+    }
+    { Nil => fail "missing arguments\n" }
+    end
+
