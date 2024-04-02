@@ -9,5 +9,7 @@ Here is a roadmap to the repository:
   that should compile and run
 
 * `scanner-tests` -- contains test files for the scanner (*i.e.*, Project 1).
+  The tests that are prefixed with `p1-good` contain valid Ovid tokens, while
+  those with the `p1-bad` prefix are error cases.
 
 * `tokens` -- contains the expected output for the `scanner-tests` inputs.
