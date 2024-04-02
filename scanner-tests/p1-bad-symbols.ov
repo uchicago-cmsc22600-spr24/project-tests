@@ -1,0 +1,11 @@
+/* examples of bad symbols */
+
+at @
+hash #
+dollar $
+hat ^
+ampersand &
+tilde ~
+backquote `
+quote '
+semicolon ;

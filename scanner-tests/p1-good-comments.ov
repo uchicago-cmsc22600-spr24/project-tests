@@ -1,0 +1,8 @@
+/* test various comment cases */
+
+// newline comment
+/* // nested newline comment */
+// /* bracketed comment */
+/* a /* nested */ comment */
+xyz/**/abc
+=/**/=

@@ -1,0 +1,3 @@
+EOF                     [p1-bad-unclosed-comment.ov:2.1-0] 
+===== ERRORS =====
+[p1-bad-unclosed-comment.ov:1.1] Error: unclosed comment at end of file

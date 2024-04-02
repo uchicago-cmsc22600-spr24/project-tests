@@ -1,0 +1,4 @@
+/* test bad string escapes */
+
+"\000"
+"\256"

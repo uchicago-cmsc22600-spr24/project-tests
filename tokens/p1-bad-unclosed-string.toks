@@ -1,0 +1,4 @@
+STRING "this string is never closed" [p1-bad-unclosed-string.ov:1.1-2.0] 
+EOF                     [p1-bad-unclosed-string.ov:2.1-0] 
+===== ERRORS =====
+[p1-bad-unclosed-string.ov:1.1] Error: unclosed string at end of line

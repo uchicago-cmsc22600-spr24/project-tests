@@ -1,0 +1,20 @@
+LID at                  [p1-bad-symbols.ov:3.1-2] 
+LID hash                [p1-bad-symbols.ov:4.1-4] 
+LID dollar              [p1-bad-symbols.ov:5.1-6] 
+LID hat                 [p1-bad-symbols.ov:6.1-3] 
+LID ampersand           [p1-bad-symbols.ov:7.1-9] 
+LID tilde               [p1-bad-symbols.ov:8.1-5] 
+LID backquote           [p1-bad-symbols.ov:9.1-9] 
+LID quote               [p1-bad-symbols.ov:10.1-5] 
+LID semicolon           [p1-bad-symbols.ov:11.1-9] 
+EOF                     [p1-bad-symbols.ov:12.1-0] 
+===== ERRORS =====
+[p1-bad-symbols.ov:3.3] Error: bad character `@'
+[p1-bad-symbols.ov:4.5] Error: bad character `#'
+[p1-bad-symbols.ov:5.7] Error: bad character `$'
+[p1-bad-symbols.ov:6.4] Error: bad character `^'
+[p1-bad-symbols.ov:7.10] Error: bad character `&'
+[p1-bad-symbols.ov:8.6] Error: bad character `~'
+[p1-bad-symbols.ov:9.10] Error: bad character ``'
+[p1-bad-symbols.ov:10.6] Error: bad character `''
+[p1-bad-symbols.ov:11.10] Error: bad character `;'
