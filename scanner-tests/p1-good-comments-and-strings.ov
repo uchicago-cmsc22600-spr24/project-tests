@@ -1,0 +1,6 @@
+/* tests combinations of comments and strings */
+" /* a comment in a string */ "
+" // a comment in a string "
+/* "a string in a comment" */
+// "a string in a comment" */
+
