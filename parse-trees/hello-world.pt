@@ -1,5 +1,1 @@
-(SPAN 0 26
-      (Prog (SPAN 0 26
-                  (SPAN 0 26
-                        (ExpBind (SPAN 3 23
-                                       (AppExp (SPAN 3 7 (VarExp print)) (SPAN 9 23 (StrExp "hello\x20;world\n")))))))))
+(Prog (DoExpBind (AppExp (VarExp print) (StrExp "hello\x20;world\n"))))

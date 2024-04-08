@@ -1,0 +1,29 @@
+/* test of overloading projection functions */
+
+overload first : [a,b] a -> b
+overload second : [a,b] a -> b
+
+fun first_2 (x, y) = x
+fun first_3 (x, y, z) = x
+fun first_4 (x, y, z, w) = x
+
+instance first : [a,b] a * b -> a = first_2
+instance first : [a,b,c] a * b * c -> a = first_3
+instance first : [a,b,c,d] a * b * c * d -> a = first_4
+
+fun second_2 (x, y) = y
+fun second_3 (x, y, z) = y
+fun second_4 (x, y, z, w) = y
+
+instance second : [a,b] a * b -> b = second_2
+instance second : [a,b,c] a * b * c -> b = second_3
+instance second : [a,b,c,d] a * b * c * d -> b = second_4
+
+fun ignore _ = ()
+
+fun demo r = ignore (first r, second r)
+
+do (demo (1, 2))
+do (demo (1, 2, 3))
+do (demo (1, 2, 3, 4))
+
