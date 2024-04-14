@@ -1,0 +1,6 @@
+// divide-by-zero.ov
+//
+// tests handling of divide by zero logic
+//
+
+let _ = 42 / 0
