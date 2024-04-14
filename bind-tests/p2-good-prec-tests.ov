@@ -1,0 +1,23 @@
+/* tests for the correct handling of precedence and associativity
+ * of operators.
+ */
+
+let _ = 1 + 2 + 3
+let _ = 1 - 2 - 3
+let _ = 1 * 2 * 3
+let _ = 1 / 2 / 3
+
+fun f1 a b c = a || b || c
+fun f2 a b c = a && b && c
+fun f3 a b c d = a && b || c && d
+fun f3 a b c d = a || b && c || d
+
+let _ = 42 == 17 || False
+let _ = 42 != 17 || True
+let _ = False || 42 == 17
+let _ = True || 42 != 17
+
+let _ = 42 == 17 && False
+let _ = 42 != 17 && True
+let _ = False && 42 == 17
+let _ = True && 42 != 17
