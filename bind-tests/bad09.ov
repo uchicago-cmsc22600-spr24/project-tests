@@ -1,0 +1,9 @@
+/* test instance declarations; variable must be declared overloaded */
+
+fun f x = 42
+
+instance foo : [t] t -> Int = f
+
+/* expected output
+[bad09.ov:5.1-31] Error: unbound overload variable `foo`
+*/

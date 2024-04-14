@@ -1,0 +1,7 @@
+/* duplicate pattern variables */
+
+do case (1, 2) of { (x, x) => () } end
+
+/* expected output
+[bad02.ov:3.25] Error: duplicate variable `x`
+*/

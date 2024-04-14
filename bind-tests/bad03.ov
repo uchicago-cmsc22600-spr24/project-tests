@@ -1,0 +1,7 @@
+/* duplicate parameter names */
+
+fun f x x = 1
+
+/* expected output
+[bad03.ov:3.9] Error: duplicate variable `x`
+*/

@@ -1,0 +1,9 @@
+/* test that overloaded variables cannot be shadowed */
+
+overload foo : [t] t -> Int
+
+fun f foo = 42
+
+/* expected output
+[bad07.ov:5.7-9] Error: overload variable 'foo' cannot be rebound as a value variable
+*/

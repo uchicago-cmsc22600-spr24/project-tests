@@ -1,0 +1,10 @@
+/* test instance declarations; variable must be declared overloaded */
+
+fun foo x = 42
+fun f x = 42
+
+instance foo : [t] t -> Int = f
+
+/* expected output
+[bad10.ov:6.1-31] Error: value variable 'foo' found where overload variable was expected
+*/

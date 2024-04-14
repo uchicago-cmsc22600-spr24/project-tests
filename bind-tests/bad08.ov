@@ -1,0 +1,9 @@
+/* redundant overload declarations */
+
+overload foo : [t] t -> Int
+
+overload foo : [t] t -> Bool
+
+/* expected output
+[bad08.ov:5.1-10.1] Error: duplicate overload `foo`
+*/

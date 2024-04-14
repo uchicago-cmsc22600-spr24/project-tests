@@ -1,0 +1,13 @@
+/* bad01.ml
+ * check that context for function body does not leak parameters
+ * into the remaining decls
+ */
+
+fun f x = x
+
+/* 'x' is not in scope here */
+let y = x
+
+/* expected output
+[bad01.ov:9.9] Error: unbound variable `x`
+*/

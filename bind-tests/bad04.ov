@@ -1,0 +1,7 @@
+/* duplicate data constructors */
+
+type T = C | C of Int
+
+/* expected output
+[bad04.ov:3.14-4.1] Error: duplicate data constructor `C`
+*/
