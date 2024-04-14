@@ -1,0 +1,2 @@
+(Prog (FunBind foo ((VarPat x)) (IntExp 42)) (FunBind f ((VarPat x)) (IntExp 42))
+      (InstanceDcl foo (OvldTy (t) (FunTy (VarTy t) (ConTy Int))) f))

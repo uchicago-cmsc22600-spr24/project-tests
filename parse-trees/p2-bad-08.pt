@@ -1,0 +1,2 @@
+(Prog (OverloadDcl foo (OvldTy (t) (FunTy (VarTy t) (ConTy Int))))
+      (OverloadDcl foo (OvldTy (t) (FunTy (VarTy t) (ConTy Bool)))))

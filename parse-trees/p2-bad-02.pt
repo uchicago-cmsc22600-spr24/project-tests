@@ -1,0 +1,1 @@
+(Prog (DoExpBind (CaseExp (TupleExp (IntExp 1) (IntExp 2)) ((CaseRule (TuplePat (VarPat x) (VarPat x)) (TupleExp))))))

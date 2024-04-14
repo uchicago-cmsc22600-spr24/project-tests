@@ -1,0 +1,1 @@
+(Prog (FunBind f ((VarPat x) (VarPat x)) (IntExp 1)))

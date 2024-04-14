@@ -1,0 +1,1 @@
+(Prog (TypeDcl T (t t) (Con C (VarTy t))))

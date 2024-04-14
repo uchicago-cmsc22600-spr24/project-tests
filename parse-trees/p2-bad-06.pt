@@ -1,0 +1,1 @@
+(Prog (OverloadDcl foo (OvldTy (t) (FunTy (VarTy t) (ConTy Int)))) (ValBind (VarPat foo) (IntExp 42)))
