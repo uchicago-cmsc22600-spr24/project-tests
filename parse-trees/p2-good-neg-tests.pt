@@ -1,0 +1,3 @@
+(Prog (FunBind f ((VarPat y)) (VarExp y)) (ValBind (VarPat x) (UnExp - (UnExp - (UnExp - (IntExp 42)))))
+      (ValBind WildPat (UnExp - (AppExp (VarExp f) (VarExp x))))
+      (ValBind WildPat (AppExp (VarExp f) (UnExp - (VarExp x)))))

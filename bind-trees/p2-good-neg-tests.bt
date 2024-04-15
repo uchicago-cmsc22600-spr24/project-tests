@@ -1,0 +1,5 @@
+(Prog (FunBind ("f" 15) ((VarPat ("y" 16))) (VarExp (VarUse ("y" 16))))
+      (ValBind (VarPat ("x" 17))
+               (UnExp (VarUse ("-" 6)) (UnExp (VarUse ("-" 6)) (UnExp (VarUse ("-" 6)) (IntExp 42)))))
+      (ValBind WildPat (UnExp (VarUse ("-" 6)) (AppExp (VarExp (VarUse ("f" 15))) (VarExp (VarUse ("x" 17))))))
+      (ValBind WildPat (AppExp (VarExp (VarUse ("f" 15))) (UnExp (VarUse ("-" 6)) (VarExp (VarUse ("x" 17)))))))

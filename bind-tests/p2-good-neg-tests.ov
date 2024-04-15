@@ -1,0 +1,7 @@
+/* test unary negation */
+
+fun f y = y
+let x = - - - 42
+let _ = - f x
+let _ = f (- x)
+
