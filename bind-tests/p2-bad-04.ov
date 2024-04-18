@@ -3,5 +3,5 @@
 type T = C | C of Int
 
 /* expected output
-[bad04.ov:3.14-4.1] Error: duplicate data constructor `C`
+[p2-bad-04.ov:3.14-8.1] Error: duplicate data constructor `C`
 */

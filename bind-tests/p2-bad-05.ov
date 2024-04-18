@@ -3,5 +3,5 @@
 type T[t, t] = C of t
 
 /* expected output
-[bad05.ov:3.1-4.1] Error: duplicate type variable `t`
+[p2-bad-05.ov:3.1-8.1] Error: duplicate type variable `t`
 */
