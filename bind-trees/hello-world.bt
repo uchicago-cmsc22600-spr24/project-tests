@@ -1,1 +1,1 @@
-(Prog (DoExpBind (AppExp (VarExp (VarUse ("print" 12))) (StrExp "hello\x20;world\n"))))
+(Prog (DoExpBind (AppExp (VarExp ("print" 18)) (StrExp "hello\x20;world\n"))))

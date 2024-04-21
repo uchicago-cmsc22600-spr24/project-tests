@@ -1,0 +1,12 @@
+(Prog (ValDcl (FunBind ("y" 18) ":"
+                       ("FORALL" (("t0" 0) ("t1" 1))
+                                 (ConTy ("->" 5)
+                                        ((ConTy ("->" 5)
+                                                ((ConTy ("->" 5) ((VarTy ("t1" 1)) (VarTy ("t0" 0)))) (ConTy ("->" 5)
+                                                                                                             ((VarTy ("t1" 1)) (VarTy ("t0" 0)))))) (ConTy ("->" 5)
+                                                                                                                       ((VarTy ("t1" 1)) (VarTy ("t0" 0)))))))
+                       (VarPat ("f" 19)) (VarPat ("x" 20))
+                       (BindExp (FunBind ("g" 21) ":" (ConTy ("->" 5) ((MetaTy 4) (MetaTy 5))) (VarPat ("x" 22))
+                                         (AppExp (AppExp (VarExp ("y" 18)) (VarExp ("f" 19))) (VarExp ("x" 22))))
+                                (AppExp (AppExp (VarExp ("f" 19)) (VarExp ("g" 21))) (VarExp ("x" 20))))))
+      (ValDcl (ValBind (TuplePat) (TupleExp))))

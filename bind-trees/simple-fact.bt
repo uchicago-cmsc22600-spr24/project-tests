@@ -1,0 +1,8 @@
+(Prog (ValBind (VarPat ("zero" 21)) (IntExp 0)) (ValBind (VarPat ("one" 22)) (IntExp 1))
+      (FunBind ("fact" 23) ((VarPat ("n" 24)))
+               (IfExp (BinExp (VarExp ("n" 24)) ("<=" 3) (VarExp ("zero" 21))) (VarExp ("one" 22))
+                      (BinExp (VarExp ("n" 24)) ("*" 7)
+                              (AppExp (VarExp ("fact" 23)) (BinExp (VarExp ("n" 24)) ("-" 6) (VarExp ("one" 22)))))))
+      (DoExpBind (IfExp (BinExp (AppExp (VarExp ("fact" 23)) (IntExp 5)) ("==" 1) (IntExp 120))
+                        (AppExp (VarExp ("print" 18)) (StrExp "Ok\n"))
+                        (AppExp (VarExp ("print" 18)) (StrExp "Fail\n")))))

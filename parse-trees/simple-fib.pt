@@ -1,0 +1,6 @@
+(Prog (FunBind fib ((VarPat n))
+               (IfExp (BinExp (VarExp n) <= (IntExp 1)) (IntExp 1)
+                      (BinExp (AppExp (VarExp fib) (BinExp (VarExp n) - (IntExp 1))) +
+                              (AppExp (VarExp fib) (BinExp (VarExp n) - (IntExp 2))))))
+      (DoExpBind (IfExp (BinExp (AppExp (VarExp fib) (IntExp 5)) == (IntExp 8)) (AppExp (VarExp print) (StrExp "Ok\n"))
+                        (AppExp (VarExp print) (StrExp "Fail\n")))))

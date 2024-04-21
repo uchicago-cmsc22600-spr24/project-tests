@@ -1,0 +1,2 @@
+(Prog (ValDcl (ValBind (VarPat ("_" 18)) (AppExp (VarExp ("+" 4)) (TupleExp (IntExp 1) (IntExp 1)))))
+      (ValDcl (ValBind (TuplePat) (TupleExp))))

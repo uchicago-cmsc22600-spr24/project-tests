@@ -24,8 +24,7 @@
                         (AppExp (VarExp appf) (TupleExp (IntExp 0) (VarExp l)))))
       (FunBind intToString ((VarPat i))
                (IfExp (BinExp (VarExp i) < (IntExp 0))
-                      (AppExp (VarExp concat)
-                              (TupleExp (StrExp "-") (AppExp (VarExp intToString) (UnExp unary - (VarExp i)))))
+                      (BinExp (StrExp "-") + (AppExp (VarExp intToString) (UnExp - (VarExp i))))
                       (IfExp (BinExp (VarExp i) == (IntExp 0)) (StrExp "0")
                              (IfExp (BinExp (VarExp i) == (IntExp 1)) (StrExp "1")
                                     (IfExp (BinExp (VarExp i) == (IntExp 2)) (StrExp "2")
@@ -40,28 +39,27 @@
                                                                                      (IfExp (BinExp (VarExp i) ==
                                                                                                     (IntExp 9))
                                                                                             (StrExp "9")
-                                                                                            (AppExp (VarExp concat)
-                                                                                                    (TupleExp (AppExp (VarExp intToString)
-                                                                                                                      (BinExp (VarExp i)
-                                                                                                                       /
-                                                                                                                       (IntExp 10)))
-                                                                                                              (AppExp (VarExp intToString)
-                                                                                                                      (BinExp (VarExp i)
-                                                                                                                       %
-                                                                                                                       (IntExp 10)))))))))))))))))
+                                                                                            (BinExp (AppExp (VarExp intToString)
+                                                                                                            (BinExp (VarExp i)
+                                                                                                                    /
+                                                                                                                    (IntExp 10)))
+                                                                                                    +
+                                                                                                    (AppExp (VarExp intToString)
+                                                                                                            (BinExp (VarExp i)
+                                                                                                                    %
+                                                                                                                    (IntExp 10))))))))))))))))
+      (InstanceDcl toString (OvldTy () (FunTy (ConTy Int) (ConTy String))) intToString)
       (FunBind printArg ((VarPat arg))
                (BindExp (DoExpBind (AppExp (VarExp print) (StrExp "arg\x20;")))
                         (BindExp (DoExpBind (AppExp (VarExp print)
-                                                    (AppExp (VarExp intToString) (AppExp (VarExp fst) (VarExp arg)))))
+                                                    (AppExp (VarExp toString) (AppExp (VarExp fst) (VarExp arg)))))
                                  (BindExp (DoExpBind (AppExp (VarExp print) (StrExp "\x20;=\x20;")))
                                           (BindExp (DoExpBind (AppExp (VarExp print)
                                                                       (AppExp (VarExp snd) (VarExp arg))))
                                                    (AppExp (VarExp print) (StrExp "\n")))))))
       (ValBind (VarPat nArgs) (AppExp (VarExp length) (VarExp arguments)))
-      (DoExpBind (AppExp (VarExp print)
-                         (AppExp (VarExp concat)
-                                 (TupleExp (StrExp "#\x20;args\x20;=\x20;")
-                                           (AppExp (VarExp concat)
-                                                   (TupleExp (AppExp (VarExp intToString) (VarExp nArgs))
-                                                             (StrExp "\n")))))))
+      (ValBind WildPat
+               (AppExp (VarExp print)
+                       (BinExp (BinExp (StrExp "#\x20;args\x20;=\x20;") + (AppExp (VarExp toString) (VarExp nArgs))) +
+                               (StrExp "\n"))))
       (DoExpBind (AppExp (AppExp (VarExp appi) (VarExp printArg)) (VarExp arguments))))

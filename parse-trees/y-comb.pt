@@ -1,0 +1,3 @@
+(Prog (FunBind y ((VarPat f) (VarPat x))
+               (BindExp (FunBind g ((VarPat x)) (AppExp (AppExp (VarExp y) (VarExp f)) (VarExp x)))
+                        (AppExp (AppExp (VarExp f) (VarExp g)) (VarExp x)))) (DoExpBind (TupleExp)))

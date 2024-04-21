@@ -1,1 +1,1 @@
-(Prog (ValBind WildPat (BinExp (IntExp 42) (VarUse ("/" 4)) (IntExp 0))))
+(Prog (ValBind WildPat (BinExp (IntExp 42) ("/" 8) (IntExp 0))))

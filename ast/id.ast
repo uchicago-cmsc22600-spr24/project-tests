@@ -1,0 +1,8 @@
+(Prog (ValDcl (FunBind ("id" 18) ":" ("FORALL" (("t0" 0)) (ConTy ("->" 5) ((VarTy ("t0" 0)) (VarTy ("t0" 0)))))
+                       (VarPat ("x" 19)) (VarExp ("x" 19))))
+      (ValDcl (ValBind (VarPat ("n" 20))
+                       (AppExp (AppExp (AppExp (VarExp ("id" 18)) (VarExp ("id" 18))) (VarExp ("id" 18))) (IntExp 42))))
+      (ValDcl (ValBind (TuplePat)
+                       (IfExp (AppExp (VarExp ("==" 0)) (TupleExp (VarExp ("n" 20)) (IntExp 42)))
+                              (AppExp (VarExp ("print" 15)) (StrExp "Ok\n"))
+                              (AppExp (VarExp ("print" 15)) (StrExp "Fail\n"))))))
