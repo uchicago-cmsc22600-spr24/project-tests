@@ -89,8 +89,8 @@
                        (BindExp (FunBind ("loop" 34) ":"
                                          (ConTy ("->" 5)
                                                 ((ConTy ("$2" 6)
-                                                        ((ConTy ("Int" 1) ()) (ConTy ("List" 2) ((MetaTy 39))))) (ConTy ("List" 2)
-                                                                                                                       ((MetaTy 39)))))
+                                                        ((ConTy ("Int" 1) ()) (ConTy ("List" 2) ((MetaTy 4))))) (ConTy ("List" 2)
+                                                                                                                       ((MetaTy 4)))))
                                          (TuplePat (VarPat ("i" 35)) (VarPat ("acc" 36)))
                                          (IfExp (AppExp (VarExp ("<=" 2))
                                                         (TupleExp (VarExp ("i" 35)) (VarExp ("n" 32))))

@@ -51,7 +51,7 @@
                                                                                                              ((VarTy ("t1" 1)) (VarTy ("t0" 0)))))) (ConTy ("->" 5)
                                                                                                                        ((VarTy ("t1" 1)) (VarTy ("t0" 0)))))))
                        (VarPat ("f" 21)) (VarPat ("x" 22))
-                       (BindExp (FunBind ("g" 23) ":" (ConTy ("->" 5) ((MetaTy 11) (MetaTy 12))) (VarPat ("x" 24))
+                       (BindExp (FunBind ("g" 23) ":" (ConTy ("->" 5) ((MetaTy 1) (MetaTy 0))) (VarPat ("x" 24))
                                          (AppExp (AppExp (VarExp ("y" 20)) (VarExp ("f" 21))) (VarExp ("x" 24))))
                                 (AppExp (AppExp (VarExp ("f" 21)) (VarExp ("g" 23))) (VarExp ("x" 22))))))
       (ValDcl (FunBind ("factY" 25) ":"

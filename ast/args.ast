@@ -37,7 +37,7 @@
                        (BindExp (FunBind ("appf" 33) ":"
                                          (ConTy ("->" 5)
                                                 ((ConTy ("$2" 6)
-                                                        ((ConTy ("Int" 1) ()) (ConTy ("List" 2) ((MetaTy 22))))) (ConTy ("Unit" 4)
+                                                        ((ConTy ("Int" 1) ()) (ConTy ("List" 2) ((MetaTy 5))))) (ConTy ("Unit" 4)
                                                                                                                        ())))
                                          (VarPat ("arg" 34))
                                          (CaseExp (AppExp (VarExp ("snd" 22)) (VarExp ("arg" 34)))

@@ -54,7 +54,7 @@
                                                                                                                        ()) (VarTy ("t1" 0)))))))
                        (VarPat ("f" 21))
                        (BindExp (FunBind ("g" 22) ":"
-                                         ("FORALL" (("t0" 2)) (ConTy ("->" 5) ((VarTy ("t0" 2)) (MetaTy 8))))
+                                         ("FORALL" (("t0" 2)) (ConTy ("->" 5) ((VarTy ("t0" 2)) (MetaTy 0))))
                                          (VarPat ("z" 23))
                                          (AppExp (AppExp (VarExp ("y" 20)) (VarExp ("f" 21))) (TupleExp)))
                                 (AppExp (VarExp ("f" 21)) (VarExp ("g" 22))))))
