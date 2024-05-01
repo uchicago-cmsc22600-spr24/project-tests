@@ -1,0 +1,1 @@
+(Prog (ValBind WildPat (IfExp (ConExp ("True" 0)) (IntExp 42) (StrExp "42"))))

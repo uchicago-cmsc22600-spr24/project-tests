@@ -1,3 +1,3 @@
 /* arms of conditional must have same type */
 
-if True then 42 else "42"
+let _ = if True then 42 else "42"
