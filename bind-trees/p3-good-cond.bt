@@ -1,0 +1,2 @@
+(Prog (ValBind (VarPat ("a" 21)) (ElseOrExp (ConExp ("False" 1)) (ConExp ("True" 0))))
+      (ValBind (VarPat ("b" 22)) (AlsoAndExp (ConExp ("True" 0)) (ConExp ("True" 0)))))

@@ -1,0 +1,5 @@
+(Prog (ValBind (VarPat ("x" 21))
+               (CaseExp (TupleExp (IntExp 1) (IntExp 2))
+                        ((CaseRule (VarPat ("x" 22)) (VarExp ("x" 22))) (CaseRule (TuplePat (VarPat ("a" 23))
+                                                                                            (VarPat ("b" 24)))
+                                                                                  (TupleExp (IntExp 3) (IntExp 4)))))))

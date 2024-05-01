@@ -1,0 +1,6 @@
+(Prog (TypeDcl Option (("a" 0)) ((DCon ("NONE" 4)) (DCon ("SOME" 5) (VarTy ("a" 0)))))
+      (ValDcl (ValBind (VarPat ("_" 18))
+                       (CaseExp (ConExp ("NONE" 4))
+                                ((CaseRule (ConPat ("NONE" 4)) (IntExp 0)) (CaseRule (ConPat ("SOME" 5)
+                                                                                             (VarPat ("_" 19)))
+                                                                                     (IntExp 1)))))))

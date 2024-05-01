@@ -1,0 +1,1 @@
+(Prog (TypeDcl ("T" 6) () (Con ("A" 4)) (Con ("B" 5)) (Con ("C" 6))) (DoExpBind (TupleExp)))

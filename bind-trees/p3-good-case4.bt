@@ -1,0 +1,4 @@
+(Prog (TypeDcl ("Option" 6) (("a" 0)) (Con ("NONE" 4)) (Con ("SOME" 5) ("a" 0)))
+      (ValBind WildPat
+               (CaseExp (ConExp ("NONE" 4))
+                        ((CaseRule (ConPat ("NONE" 4)) (IntExp 0)) (CaseRule (ConPat ("SOME" 5) WildPat) (IntExp 1))))))

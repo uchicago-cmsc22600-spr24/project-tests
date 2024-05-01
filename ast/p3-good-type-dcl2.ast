@@ -1,0 +1,2 @@
+(Prog (TypeDcl Option (("a" 0)) ((DCon ("NONE" 4)) (DCon ("SOME" 5) (VarTy ("a" 0)))))
+      (ValDcl (ValBind (TuplePat) (TupleExp))))

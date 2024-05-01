@@ -1,0 +1,1 @@
+(Prog (TypeDcl ("U" 6) () (Con ("Unit" 4))) (DoExpBind (CaseExp (ConExp ("Unit" 4)) ((CaseRule WildPat (TupleExp))))))

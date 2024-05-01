@@ -1,0 +1,2 @@
+(Prog (TypeDcl U () ((DCon ("Unit" 4))))
+      (ValDcl (ValBind (TuplePat) (CaseExp (ConExp ("Unit" 4)) ((CaseRule (ConPat ("Unit" 4)) (TupleExp)))))))

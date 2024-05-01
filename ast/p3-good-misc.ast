@@ -1,0 +1,17 @@
+(Prog (ValDcl (FunBind ("fst" 18) ":"
+                       ("FORALL" (("t0" 0) ("t1" 1))
+                                 (ConTy ("->" 5)
+                                        ((ConTy ("$2" 6) ((VarTy ("t0" 0)) (VarTy ("t1" 1)))) (VarTy ("t0" 0)))))
+                       (TuplePat (VarPat ("a" 19)) (VarPat ("_" 20))) (VarExp ("a" 19))))
+      (ValDcl (FunBind ("snd" 21) ":"
+                       ("FORALL" (("t2" 2) ("t3" 3))
+                                 (ConTy ("->" 5)
+                                        ((ConTy ("$2" 6) ((VarTy ("t3" 3)) (VarTy ("t2" 2)))) (VarTy ("t2" 2)))))
+                       (VarPat ("x" 22))
+                       (CaseExp (VarExp ("x" 22))
+                                ((CaseRule (TuplePat (VarPat ("_" 23)) (VarPat ("b" 24))) (VarExp ("b" 24)))))))
+      (ValDcl (ValBind (VarPat ("a" 25)) (AppExp (VarExp ("fst" 18)) (TupleExp (IntExp 42) (StrExp "42")))))
+      (ValDcl (ValBind (VarPat ("b" 26))
+                       (AppExp (VarExp ("fst" 18))
+                               (AppExp (VarExp ("snd" 21))
+                                       (TupleExp (ConExp ("True" 0)) (TupleExp (IntExp 0) (IntExp 1))))))))

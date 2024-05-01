@@ -1,0 +1,6 @@
+(Prog (TypeDcl Tree (("a" 0))
+               ((DCon ("Leaf" 4)) (DCon ("Node" 5) (VarTy ("a" 0)) (ConTy ("Tree" 5) ((VarTy ("a" 0))))
+                                        (ConTy ("Tree" 5) ((VarTy ("a" 0)))))))
+      (ValDcl (ValBind (VarPat ("t" 18))
+                       (AppExp (AppExp (AppExp (ConExp ("Node" 5)) (IntExp 0)) (ConExp ("Leaf" 4)))
+                               (ConExp ("Leaf" 4))))))

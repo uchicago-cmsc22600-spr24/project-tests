@@ -1,0 +1,1 @@
+(Prog (ValDcl (ValBind (TuplePat) (AppExp (VarExp ("print" 15)) (StrExp "hello\x20;world\n")))))

@@ -1,0 +1,6 @@
+(Prog (TypeDcl T () ((DCon ("A" 4)) (DCon ("B" 5))))
+      (ValDcl (ValBind (TuplePat)
+                       (CaseExp (ConExp ("A" 4))
+                                ((CaseRule (ConPat ("A" 4)) (AppExp (VarExp ("print" 15)) (StrExp "A\n"))) (CaseRule (ConPat ("B" 5))
+                                                                                                                     (AppExp (VarExp ("print" 15))
+                                                                                                                       (StrExp "B\n"))))))))

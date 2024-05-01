@@ -1,0 +1,1 @@
+(Prog (TypeDcl ("Pair" 6) (("a" 0) ("b" 1)) (Con ("Pair" 4) (TupleTy ("a" 0) ("b" 1)))) (DoExpBind (TupleExp)))

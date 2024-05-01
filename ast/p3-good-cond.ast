@@ -1,0 +1,2 @@
+(Prog (ValDcl (ValBind (VarPat ("a" 18)) (IfExp (ConExp ("False" 1)) (ConExp ("True" 0)) (ConExp ("True" 0)))))
+      (ValDcl (ValBind (VarPat ("b" 19)) (IfExp (ConExp ("True" 0)) (ConExp ("True" 0)) (ConExp ("False" 1))))))

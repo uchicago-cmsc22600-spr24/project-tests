@@ -1,0 +1,2 @@
+(Prog (FunBind ("f" 21) ((VarPat ("x" 22)) (VarPat ("y" 23))) (BinExp (VarExp ("x" 22)) ("+" 5) (VarExp ("y" 23))))
+      (ValBind WildPat (AppExp (AppExp (VarExp ("f" 21)) (IntExp 2)) (StrExp "false"))) (DoExpBind (TupleExp)))

@@ -1,0 +1,1 @@
+(Prog (TypeDcl T () ((DCon ("A" 4)) (DCon ("B" 5)) (DCon ("C" 6)))) (ValDcl (ValBind (TuplePat) (TupleExp))))

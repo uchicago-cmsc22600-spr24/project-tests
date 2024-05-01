@@ -1,0 +1,2 @@
+(Prog (ValBind WildPat (BinExp (IntExp 1) ("+" 5) (StrExp "hi")))
+      (ValBind WildPat (BinExp (StrExp "abc") ("<" 4) (StrExp "def"))) (DoExpBind (TupleExp)))

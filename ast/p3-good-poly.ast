@@ -1,0 +1,5 @@
+(Prog (ValDcl (FunBind ("id" 18) ":" ("FORALL" (("t0" 0)) (ConTy ("->" 5) ((VarTy ("t0" 0)) (VarTy ("t0" 0)))))
+                       (VarPat ("x" 19)) (VarExp ("x" 19))))
+      (ValDcl (ValBind (VarPat ("a" 20)) (AppExp (VarExp ("id" 18)) (ConExp ("True" 0)))))
+      (ValDcl (ValBind (VarPat ("b" 21)) (AppExp (VarExp ("id" 18)) (IntExp 42))))
+      (ValDcl (ValBind (VarPat ("c" 22)) (AppExp (AppExp (VarExp ("id" 18)) (VarExp ("id" 18))) (ConExp ("False" 1))))))

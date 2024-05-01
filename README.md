@@ -5,6 +5,9 @@ project.
 
 Here is a roadmap to the repository:
 
+* `ast` -- contains the expected abstract-syntax trees for the examples
+  and type-checker tests.
+
 * `bind-tests` -- tests specific to Project 2.  These include tests of the
   parser (e.g., does it handle precedence and associativity correctly) and
   tests of the binding checker.
@@ -20,6 +23,10 @@ Here is a roadmap to the repository:
   those with the `p1-bad` prefix are error cases.
 
 * `tokens` -- contains the expected output for the `scanner-tests` inputs.
+
+* `type-tests` -- contains test files for the type checker (*i.e.*, Project 3).
+  The tests that are prefixed with `p3-good` contain valid Ovid tokens, while
+  those with the `p3-bad` prefix are error cases.
 
 * `parse-trees` -- contains the expected parse trees for the examples and
   bind tests.

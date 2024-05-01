@@ -1,0 +1,3 @@
+(Prog (ValBind WildPat
+               (AppExp (AppExp (ConExp ("Cons" 2)) (IntExp 42))
+                       (AppExp (AppExp (ConExp ("Cons" 2)) (IntExp 17)) (ConExp ("Nil" 3))))))

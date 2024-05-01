@@ -1,0 +1,5 @@
+(Prog (TypeDcl ("T" 6) () (Con ("A" 4)) (Con ("B" 5)))
+      (DoExpBind (CaseExp (ConExp ("A" 4))
+                          ((CaseRule (ConPat ("A" 4)) (AppExp (VarExp ("print" 18)) (StrExp "A\n"))) (CaseRule (ConPat ("B" 5))
+                                                                                                               (AppExp (VarExp ("print" 18))
+                                                                                                                       (StrExp "B\n")))))))

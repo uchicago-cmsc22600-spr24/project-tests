@@ -1,0 +1,1 @@
+(Prog (ValDcl (ValBind (VarPat ("y" 18)) (BindExp (ValBind (VarPat ("x" 19)) (IntExp 0)) (VarExp ("x" 19))))))

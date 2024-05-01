@@ -1,0 +1,7 @@
+(Prog (FunBind ("fst" 21) ((TuplePat (VarPat ("a" 22)) WildPat)) (VarExp ("a" 22)))
+      (FunBind ("snd" 23) ((VarPat ("x" 24)))
+               (CaseExp (VarExp ("x" 24)) ((CaseRule (TuplePat WildPat (VarPat ("b" 25))) (VarExp ("b" 25))))))
+      (ValBind (VarPat ("a" 26)) (AppExp (VarExp ("fst" 21)) (TupleExp (IntExp 42) (StrExp "42"))))
+      (ValBind (VarPat ("b" 27))
+               (AppExp (VarExp ("fst" 21))
+                       (AppExp (VarExp ("snd" 23)) (TupleExp (ConExp ("True" 0)) (TupleExp (IntExp 0) (IntExp 1)))))))

@@ -1,0 +1,1 @@
+(Prog (ValDcl (ValBind (VarPat ("_" 18)) (TupleExp (IntExp 1) (IntExp 2) (ConExp ("False" 1)) (StrExp "Hello")))))

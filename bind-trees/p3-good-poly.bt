@@ -1,0 +1,4 @@
+(Prog (FunBind ("id" 21) ((VarPat ("x" 22))) (VarExp ("x" 22)))
+      (ValBind (VarPat ("a" 23)) (AppExp (VarExp ("id" 21)) (ConExp ("True" 0))))
+      (ValBind (VarPat ("b" 24)) (AppExp (VarExp ("id" 21)) (IntExp 42)))
+      (ValBind (VarPat ("c" 25)) (AppExp (AppExp (VarExp ("id" 21)) (VarExp ("id" 21))) (ConExp ("False" 1)))))

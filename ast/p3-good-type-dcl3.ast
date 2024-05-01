@@ -1,0 +1,2 @@
+(Prog (TypeDcl Pair (("a" 0) ("b" 1)) ((DCon ("Pair" 4) (ConTy ("$2" 6) ((VarTy ("a" 0)) (VarTy ("b" 1)))))))
+      (ValDcl (ValBind (TuplePat) (TupleExp))))

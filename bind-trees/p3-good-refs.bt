@@ -1,0 +1,6 @@
+(Prog (ValBind (VarPat ("x" 21)) (AppExp (VarExp ("newRef" 17)) (IntExp 0)))
+      (FunBind ("inc" 22) ((VarPat ("r" 23)))
+               (BinExp (VarExp ("r" 23)) (":=" 0) (BinExp (UnExp ("!" 10) (VarExp ("r" 23))) ("+" 5) (IntExp 1))))
+      (DoExpBind (AppExp (VarExp ("inc" 22)) (VarExp ("x" 21))))
+      (DoExpBind (AppExp (VarExp ("inc" 22)) (VarExp ("x" 21))))
+      (ValBind (VarPat ("y" 24)) (UnExp ("!" 10) (VarExp ("x" 21)))))

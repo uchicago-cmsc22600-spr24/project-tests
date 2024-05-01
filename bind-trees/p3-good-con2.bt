@@ -1,0 +1,2 @@
+(Prog (TypeDcl ("MyList" 6) (("a" 0)) (Con ("NIL" 4)) (Con ("CONS" 5) (TupleTy ("a" 0) (ConTy ("MyList" 6) ("a" 0)))))
+      (ValBind WildPat (AppExp (ConExp ("CONS" 5)) (TupleExp (IntExp 42) (ConExp ("NIL" 4))))))

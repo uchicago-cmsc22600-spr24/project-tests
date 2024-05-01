@@ -1,0 +1,1 @@
+(Prog (ValDcl (ValBind (VarPat ("_" 18)) (ConExp ("Nil" 3)))))

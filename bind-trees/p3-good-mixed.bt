@@ -1,0 +1,4 @@
+(Prog (ValBind (VarPat ("x" 21))
+               (AlsoAndExp (BinExp (BinExp (BinExp (IntExp 1) ("+" 5) (IntExp 2)) ("+" 5)
+                                           (BinExp (BinExp (IntExp 3) ("*" 7) (IntExp 4)) ("*" 7) (IntExp 5))) ("==" 1)
+                                   (IntExp 42)) (BinExp (IntExp 17) ("!=" 2) (IntExp 42)))))

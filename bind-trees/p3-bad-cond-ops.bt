@@ -1,0 +1,3 @@
+(Prog (ValBind WildPat (IfExp (IntExp 1) (IntExp 2) (IntExp 3)))
+      (ValBind WildPat (ElseOrExp (StrExp "True") (ConExp ("False" 1))))
+      (ValBind WildPat (AlsoAndExp (ConExp ("True" 0)) (StrExp "false"))))

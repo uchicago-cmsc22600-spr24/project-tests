@@ -1,0 +1,5 @@
+(Prog (ValBind (VarPat ("a" 21)) (BinExp (IntExp 1) ("+" 5) (IntExp 2)))
+      (ValBind (VarPat ("b" 22)) (BinExp (IntExp 1) ("*" 7) (IntExp 2)))
+      (ValBind (VarPat ("c" 23)) (BinExp (IntExp 1) ("/" 8) (IntExp 2)))
+      (ValBind (VarPat ("d" 24)) (BinExp (IntExp 1) ("%" 9) (IntExp 2)))
+      (ValBind (VarPat ("e" 25)) (UnExp ("unary\x20;-" 11) (IntExp 2))))

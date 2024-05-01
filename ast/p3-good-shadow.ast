@@ -1,0 +1,3 @@
+(Prog (ValDcl (ValBind (VarPat ("x" 18)) (IntExp 0)))
+      (ValDcl (ValBind (VarPat ("x" 19)) (AppExp (VarExp ("+" 4)) (TupleExp (VarExp ("x" 18)) (VarExp ("x" 18))))))
+      (ValDcl (ValBind (VarPat ("z" 20)) (VarExp ("x" 19)))))

@@ -1,0 +1,7 @@
+(Prog (ValDcl (ValBind (VarPat ("s1" 18))
+                       (AppExp (VarExp ("concat" 22))
+                               (TupleExp (StrExp "hello")
+                                         (AppExp (VarExp ("concat" 22)) (TupleExp (StrExp "\x20;") (StrExp "world")))))))
+      (ValDcl (ValBind (VarPat ("c" 19)) (AppExp (VarExp ("sub" 17)) (TupleExp (VarExp ("s1" 18)) (IntExp 0)))))
+      (ValDcl (ValBind (VarPat ("n" 20)) (AppExp (VarExp ("size" 16)) (VarExp ("s1" 18)))))
+      (ValDcl (ValBind (VarPat ("s2" 21)) (AppExp (VarExp ("chr" 11)) (VarExp ("c" 19))))))
