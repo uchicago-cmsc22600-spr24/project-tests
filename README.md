@@ -15,19 +15,27 @@ Here is a roadmap to the repository:
 * `bind-trees` -- contains the expected bind trees for the examples and
   bind tests.
 
+* `closures` -- contains the expected closure-converted simple-ast
+  for the examples.
+
 * `examples` -- contains example Ovid programs.  These are correct programs
   that should compile and run
+
+* `free-vars` -- contains the expected free-variable information for the
+  examples.
+
+* `parse-trees` -- contains the expected parse trees for the examples and
+  bind tests.
 
 * `scanner-tests` -- contains test files for the scanner (*i.e.*, Project 1).
   The tests that are prefixed with `p1-good` contain valid Ovid tokens, while
   those with the `p1-bad` prefix are error cases.
+
+* `simplify-tests`
 
 * `tokens` -- contains the expected output for the `scanner-tests` inputs.
 
 * `type-tests` -- contains test files for the type checker (*i.e.*, Project 3).
   The tests that are prefixed with `p3-good` contain valid Ovid tokens, while
   those with the `p3-bad` prefix are error cases.
-
-* `parse-trees` -- contains the expected parse trees for the examples and
-  bind tests.
 
