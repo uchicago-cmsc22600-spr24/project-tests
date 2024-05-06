@@ -1,0 +1,4 @@
+(PROG (E_FUN ("intToString" 1) () ())
+      (E_FUN ("optionToString" 15) () ((E_FUN ("optionToString1" 17) (("aToString" 16)) ())))
+      (E_FUN ("charToDigit" 31) (("ord0" 24) ("ord9" 28)) ())
+      (E_FUN ("stringToInt" 35) (("charToDigit" 31)) ((E_FUN ("loop" 38) (("charToDigit" 31) ("s" 36) ("sz" 37)) ()))))

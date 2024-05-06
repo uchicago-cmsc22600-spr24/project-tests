@@ -1,0 +1,5 @@
+(PROG (E_FUN ("fst" 1) () ()) (E_FUN ("snd" 5) () ()) (E_FUN ("length" 9) () ())
+      (E_FUN ("appi" 15) (("fst" 1) ("snd" 5))
+             ((E_FUN ("appi1" 17) (("fst" 1) ("snd" 5) ("f" 16))
+                     ((E_FUN ("appf" 19) (("fst" 1) ("snd" 5) ("f" 16)) ()))))) (E_FUN ("intToString" 31) () ())
+      (E_FUN ("printArg" 45) (("fst" 1) ("snd" 5) ("intToString" 31)) ()))

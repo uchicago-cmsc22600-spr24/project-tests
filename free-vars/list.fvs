@@ -1,0 +1,6 @@
+(PROG (E_FUN ("intToString" 1) () ())
+      (E_FUN ("foldl" 15) ()
+             ((E_FUN ("foldl1" 17) (("foldl" 15) ("f" 16)) ((E_FUN ("foldl2" 19) (("foldl" 15) ("f" 16) ("b" 18)) ())))))
+      (E_FUN ("rev" 27) (("foldl" 15)) ((E_FUN ("cons" 29) () ((E_FUN ("cons1" 31) (("hd" 30)) ())))))
+      (E_FUN ("tabulate" 36) (("rev" 27)) ((E_FUN ("loop" 40) (("rev" 27) ("n" 38) ("f" 39)) ())))
+      (E_FUN ("f" 51) () ((E_FUN ("f1" 53) (("x" 52)) ()))) (E_FUN ("g" 56) () ()))

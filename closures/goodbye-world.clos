@@ -1,0 +1,68 @@
+(PROG (("arguments" 0))
+      (E_LET (("hello" 1) (E_RET (V_STR "Hello")))
+             (E_LET (("goodbye" 2) (E_RET (V_STR "Goodbye")))
+                    (E_LET (("world" 3) (E_RET (V_STR "world")))
+                           (E_LET (("_t0002" 4) (R_CALL "_mml_concat" (V_VAR "world" 3) (V_STR "!\n")))
+                                  (E_LET (("_t0001" 5) (R_CALL "_mml_concat" (V_STR ",\x20;") (V_VAR "_t0002" 4)))
+                                         (E_LET (("_t0000" 6) (R_CALL "_mml_concat" (V_VAR "hello" 1)
+                                                                      (V_VAR "_t0001" 5)))
+                                                (E_LET (("_" 7) (R_CALL "_mml_print" (V_VAR "_t0000" 6)))
+                                                       (E_FUN (("f_code" 8) (("f" 9) ("n" 10))
+                                                                            (E_LET (("goodbye" 11) (R_SELECT 0 ("f" 9)))
+                                                                                   (E_LET (("world" 12) (R_SELECT 1
+                                                                                                                  ("f" 9)))
+                                                                                          (E_FUN (("loop_code" 13) (("loop" 14) ("i" 15))
+                                                                                                                   (E_LET (("n" 16) (R_SELECT 0
+                                                                                                                       ("loop" 14)))
+                                                                                                                       (E_IF ("IntLt" (V_VAR "i"
+                                                                                                                       15)
+                                                                                                                       (V_VAR "n"
+                                                                                                                       16))
+                                                                                                                       (E_LET (("un" 17) (R_CALL "_mml_print"
+                                                                                                                       (V_STR "\x20;cruel")))
+                                                                                                                       (E_LET (("_t0003" 18) (R_PRIM "IntAdd"
+                                                                                                                       (V_VAR "i"
+                                                                                                                       15)
+                                                                                                                       (V_INT 1)))
+                                                                                                                       (E_LET (("cp" 19) (R_SELECT 0
+                                                                                                                       ("loop" 14)))
+                                                                                                                       (E_APPLY ("cp" 19)
+                                                                                                                       (V_VAR "loop"
+                                                                                                                       14)
+                                                                                                                       (V_VAR "_t0003"
+                                                                                                                       18)))))
+                                                                                                                       (E_LET (("_t0004" 20) (R_TUPLE))
+                                                                                                                       (E_RET (V_VAR "_t0004"
+                                                                                                                       20))))))
+                                                                                                 (E_LET (("loop" 21) (R_TUPLE (V_VAR "n"
+                                                                                                                       10)))
+                                                                                                        (E_LET (("_t0005" 22) (R_CALL "_mml_concat"
+                                                                                                                       (V_VAR "goodbye"
+                                                                                                                       11)
+                                                                                                                       (V_STR ",")))
+                                                                                                               (E_LET (("un" 23) (R_CALL "_mml_print"
+                                                                                                                       (V_VAR "_t0005"
+                                                                                                                       22)))
+                                                                                                                      (E_LET (("un" 24) (E_APPLY ("loop_code" 13)
+                                                                                                                       (V_VAR "loop"
+                                                                                                                       21)
+                                                                                                                       (V_INT 0)))
+                                                                                                                       (E_LET (("_t0007" 25) (R_CALL "_mml_concat"
+                                                                                                                       (V_VAR "world"
+                                                                                                                       12)
+                                                                                                                       (V_STR "!\n")))
+                                                                                                                       (E_LET (("_t0006" 26) (R_CALL "_mml_concat"
+                                                                                                                       (V_STR "\x20;")
+                                                                                                                       (V_VAR "_t0007"
+                                                                                                                       25)))
+                                                                                                                       (E_LET (("_t0008" 27) (R_CALL "_mml_print"
+                                                                                                                       (V_VAR "_t0006"
+                                                                                                                       26)))
+                                                                                                                       (E_RET (V_VAR "_t0008"
+                                                                                                                       27)))))))))))))
+                                                              (E_LET (("f" 28) (R_TUPLE (V_VAR "goodbye" 2)
+                                                                                        (V_VAR "world" 3)))
+                                                                     (E_LET (("un" 29) (E_APPLY ("f_code" 8)
+                                                                                                (V_VAR "f" 28)
+                                                                                                (V_INT 5)))
+                                                                            (E_RET (V_INT 0)))))))))))))
