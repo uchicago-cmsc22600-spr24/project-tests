@@ -31,6 +31,11 @@ Here is a roadmap to the repository:
   The tests that are prefixed with `p1-good` contain valid Ovid tokens, while
   those with the `p1-bad` prefix are error cases.
 
+* `simple-ast` -- contains dumps of the Simple AST IR, both before and after
+  "optimization".  The files with `.smpl` suffixes are the result of simplification
+  and the files with `.opt` suffixed are the result of the default optimizations
+  (just let floating).
+
 * `simplify-tests`
 
 * `tokens` -- contains the expected output for the `scanner-tests` inputs.

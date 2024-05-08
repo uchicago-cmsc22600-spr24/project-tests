@@ -1,12 +1,12 @@
 (PROG (("arguments" 0))
       (E_FUN (("y_code" 1) (("f" 2))
                            (E_FUN (("y1_code" 3) (("y1" 4) ("x" 5))
-                                                 (E_LET (("y" 6) (R_SELECT 0 ("y1" 4)))
-                                                        (E_LET (("f" 7) (R_SELECT 1 ("y1" 4)))
+                                                 (E_LET (("y" 6) (R_SELECT 1 ("y1" 4)))
+                                                        (E_LET (("f" 7) (R_SELECT 2 ("y1" 4)))
                                                                (E_FUN (("g_code" 8) (("g" 9) ("x" 10))
-                                                                                    (E_LET (("y" 11) (R_SELECT 0
+                                                                                    (E_LET (("y" 11) (R_SELECT 1
                                                                                                                ("g" 9)))
-                                                                                           (E_LET (("f" 12) (R_SELECT 1
+                                                                                           (E_LET (("f" 12) (R_SELECT 2
                                                                                                                       ("g" 9)))
                                                                                                   (E_LET (("_t0000" 13) (E_LET (("cp" 14) (R_SELECT 0
                                                                                                                        ("y" 11)))
@@ -22,7 +22,8 @@
                                                                                                                        13)
                                                                                                                        (V_VAR "x"
                                                                                                                        10)))))))
-                                                                      (E_LET (("g" 16) (R_TUPLE (V_VAR "y" 6)
+                                                                      (E_LET (("g" 16) (R_TUPLE (V_VAR "g_code" 8)
+                                                                                                (V_VAR "y" 6)
                                                                                                 (V_VAR "f" 7)))
                                                                              (E_LET (("_t0001" 17) (E_LET (("cp" 18) (R_SELECT 0
                                                                                                                        ("f" 7)))
@@ -36,5 +37,5 @@
                                                                                            (E_APPLY ("cp" 19)
                                                                                                     (V_VAR "_t0001" 17)
                                                                                                     (V_VAR "x" 5)))))))))
-                                  (E_LET (("y1" 20) (R_TUPLE (V_VAR "y" 21) (V_VAR "f" 2))) (E_RET (V_VAR "y1" 20)))))
-             (E_LET (("un" 22) (R_TUPLE)) (E_RET (V_INT 0)))))
+                                  (E_LET (("y1" 20) (R_TUPLE (V_VAR "y1_code" 3) (V_VAR "y" 21) (V_VAR "f" 2)))
+                                         (E_RET (V_VAR "y1" 20))))) (E_LET (("un" 22) (R_TUPLE)) (E_RET (V_INT 0)))))

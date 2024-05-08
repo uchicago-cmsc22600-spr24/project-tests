@@ -26,11 +26,11 @@
                                                     (E_LET (("fst" 20) (R_SELECT 0 ("appi" 18)))
                                                            (E_LET (("snd" 21) (R_SELECT 1 ("appi" 18)))
                                                                   (E_FUN (("appi1_code" 22) (("appi1" 23) ("l" 24))
-                                                                                            (E_LET (("fst" 25) (R_SELECT 0
+                                                                                            (E_LET (("fst" 25) (R_SELECT 1
                                                                                                                        ("appi1" 23)))
-                                                                                                   (E_LET (("snd" 26) (R_SELECT 1
+                                                                                                   (E_LET (("snd" 26) (R_SELECT 2
                                                                                                                        ("appi1" 23)))
-                                                                                                          (E_LET (("f" 27) (R_SELECT 2
+                                                                                                          (E_LET (("f" 27) (R_SELECT 3
                                                                                                                        ("appi1" 23)))
                                                                                                                  (E_FUN (("appf_code" 28) (("appf" 29) ("arg" 30))
                                                                                                                        (E_LET (("fst" 31) (R_SELECT 0
@@ -99,7 +99,9 @@
                                                                                                                        47)
                                                                                                                        (V_VAR "_t0007"
                                                                                                                        48)))))))))
-                                                                         (E_LET (("appi1" 49) (R_TUPLE (V_VAR "fst" 20)
+                                                                         (E_LET (("appi1" 49) (R_TUPLE (V_VAR "appi1_code"
+                                                                                                              22)
+                                                                                                       (V_VAR "fst" 20)
                                                                                                        (V_VAR "snd" 21)
                                                                                                        (V_VAR "f" 19)))
                                                                                 (E_RET (V_VAR "appi1" 49)))))))
@@ -205,11 +207,11 @@
                                                                                                                        (E_RET (V_VAR "_t0019"
                                                                                                                        70)))))))))))))))))))
                                                 (E_FUN (("printArg_code" 71) (("printArg" 72) ("arg" 73))
-                                                                             (E_LET (("fst" 74) (R_SELECT 0
+                                                                             (E_LET (("fst" 74) (R_SELECT 1
                                                                                                           ("printArg" 72)))
-                                                                                    (E_LET (("snd" 75) (R_SELECT 1
+                                                                                    (E_LET (("snd" 75) (R_SELECT 2
                                                                                                                  ("printArg" 72)))
-                                                                                           (E_LET (("intToString" 76) (R_SELECT 2
+                                                                                           (E_LET (("intToString" 76) (R_SELECT 3
                                                                                                                        ("printArg" 72)))
                                                                                                   (E_LET (("un" 77) (R_CALL "_mml_print"
                                                                                                                        (V_STR "arg\x20;")))
@@ -246,7 +248,8 @@
                                                                                                                        (V_STR "\n")))
                                                                                                                        (E_RET (V_VAR "_t0023"
                                                                                                                        87))))))))))))))
-                                                       (E_LET (("printArg" 88) (R_TUPLE (V_VAR "fst" 51)
+                                                       (E_LET (("printArg" 88) (R_TUPLE (V_VAR "printArg_code" 71)
+                                                                                        (V_VAR "fst" 51)
                                                                                         (V_VAR "snd" 52)
                                                                                         (V_VAR "intToString" 58)))
                                                               (E_LET (("nArgs" 89) (E_LET (("cp" 90) (R_SELECT 0

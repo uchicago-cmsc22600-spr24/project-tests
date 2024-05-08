@@ -83,13 +83,13 @@
                                                               (E_LET (("zero" 26) (R_SELECT 0 ("preEven" 24)))
                                                                      (E_LET (("one" 27) (R_SELECT 1 ("preEven" 24)))
                                                                             (E_FUN (("preEven1_code" 28) (("preEven1" 29) ("x" 30))
-                                                                                                         (E_LET (("zero" 31) (R_SELECT 0
+                                                                                                         (E_LET (("zero" 31) (R_SELECT 1
                                                                                                                        ("preEven1" 29)))
-                                                                                                                (E_LET (("one" 32) (R_SELECT 1
+                                                                                                                (E_LET (("one" 32) (R_SELECT 2
                                                                                                                        ("preEven1" 29)))
-                                                                                                                       (E_LET (("preEven" 33) (R_SELECT 2
+                                                                                                                       (E_LET (("preEven" 33) (R_SELECT 3
                                                                                                                        ("preEven1" 29)))
-                                                                                                                       (E_LET (("odd" 34) (R_SELECT 3
+                                                                                                                       (E_LET (("odd" 34) (R_SELECT 4
                                                                                                                        ("preEven1" 29)))
                                                                                                                        (E_IF ("IntLt" (V_VAR "x"
                                                                                                                        30)
@@ -129,7 +129,9 @@
                                                                                                                        34)
                                                                                                                        (V_VAR "_t0014"
                                                                                                                        39)))))))))))
-                                                                                   (E_LET (("preEven1" 41) (R_TUPLE (V_VAR "zero"
+                                                                                   (E_LET (("preEven1" 41) (R_TUPLE (V_VAR "preEven1_code"
+                                                                                                                       28)
+                                                                                                                    (V_VAR "zero"
                                                                                                                        26)
                                                                                                                     (V_VAR "one"
                                                                                                                        27)
@@ -140,10 +142,10 @@
                                                                                           (E_RET (V_VAR "preEven1" 41)))))))
                                          (E_LET (("preEven" 42) (R_TUPLE (V_VAR "zero" 21) (V_VAR "one" 22)))
                                                 (E_FUN (("odd_code" 43) (("odd" 44) ("x" 45))
-                                                                        (E_LET (("zero" 46) (R_SELECT 0 ("odd" 44)))
-                                                                               (E_LET (("one" 47) (R_SELECT 1
+                                                                        (E_LET (("zero" 46) (R_SELECT 1 ("odd" 44)))
+                                                                               (E_LET (("one" 47) (R_SELECT 2
                                                                                                             ("odd" 44)))
-                                                                                      (E_LET (("preEven" 48) (R_SELECT 2
+                                                                                      (E_LET (("preEven" 48) (R_SELECT 3
                                                                                                                        ("odd" 44)))
                                                                                              (E_IF ("IntLt" (V_VAR "x"
                                                                                                                    45)
@@ -181,7 +183,8 @@
                                                                                                                        51)
                                                                                                                        (V_VAR "_t0017"
                                                                                                                        52)))))))))))
-                                                       (E_LET (("odd" 54) (R_TUPLE (V_VAR "zero" 21) (V_VAR "one" 22)
+                                                       (E_LET (("odd" 54) (R_TUPLE (V_VAR "odd_code" 43)
+                                                                                   (V_VAR "zero" 21) (V_VAR "one" 22)
                                                                                    (V_VAR "preEven" 42)))
                                                               (E_LET (("even" 55) (E_APPLY ("preEven_code" 23)
                                                                                            (V_VAR "preEven" 42)

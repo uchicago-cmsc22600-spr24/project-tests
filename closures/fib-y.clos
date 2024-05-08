@@ -76,8 +76,8 @@
                                                                                                                        18)))))))))))))))))))
              (E_FUN (("y_code" 19) (("f" 20))
                                    (E_FUN (("g_code" 21) (("g" 22) ("z" 23))
-                                                         (E_LET (("y" 24) (R_SELECT 0 ("g" 22)))
-                                                                (E_LET (("f" 25) (R_SELECT 1 ("g" 22)))
+                                                         (E_LET (("y" 24) (R_SELECT 1 ("g" 22)))
+                                                                (E_LET (("f" 25) (R_SELECT 2 ("g" 22)))
                                                                        (E_LET (("_t0012" 26) (E_LET (("cp" 27) (R_SELECT 0
                                                                                                                        ("y" 24)))
                                                                                                     (E_APPLY ("cp" 27)
@@ -93,105 +93,111 @@
                                                                                                             26)
                                                                                                      (V_VAR "_t0013"
                                                                                                             28))))))))
-                                          (E_LET (("g" 30) (R_TUPLE (V_VAR "y" 31) (V_VAR "f" 20)))
+                                          (E_LET (("g" 30) (R_TUPLE (V_VAR "g_code" 21) (V_VAR "y" 31) (V_VAR "f" 20)))
                                                  (E_LET (("cp" 32) (R_SELECT 0 ("f" 20)))
                                                         (E_APPLY ("cp" 32) (V_VAR "f" 20) (V_VAR "g" 30))))))
-                    (E_FUN (("fibY_code" 33) (("fib" 34))
-                                             (E_FUN (("fibY1_code" 35) (("fibY1" 36) ("z" 37))
-                                                                       (E_LET (("fib" 38) (R_SELECT 0 ("fibY1" 36)))
-                                                                              (E_FUN (("fibY2_code" 39) (("fibY2" 40) ("n" 41))
-                                                                                                        (E_LET (("fib" 42) (R_SELECT 0
-                                                                                                                       ("fibY2" 40)))
-                                                                                                               (E_LET (("z" 43) (R_SELECT 1
-                                                                                                                       ("fibY2" 40)))
+                    (E_FUN (("fibY_code" 33) (("fibY" 34) ("fib" 35))
+                                             (E_FUN (("fibY1_code" 36) (("fibY1" 37) ("z" 38))
+                                                                       (E_LET (("fib" 39) (R_SELECT 1 ("fibY1" 37)))
+                                                                              (E_FUN (("fibY2_code" 40) (("fibY2" 41) ("n" 42))
+                                                                                                        (E_LET (("fib" 43) (R_SELECT 1
+                                                                                                                       ("fibY2" 41)))
+                                                                                                               (E_LET (("z" 44) (R_SELECT 2
+                                                                                                                       ("fibY2" 41)))
                                                                                                                       (E_IF ("IntLte" (V_VAR "n"
-                                                                                                                       41)
+                                                                                                                       42)
                                                                                                                        (V_INT 1))
                                                                                                                        (E_RET (V_INT 1))
-                                                                                                                       (E_LET (("_t0015" 44) (E_LET (("cp" 45) (R_SELECT 0
-                                                                                                                       ("fib" 42)))
-                                                                                                                       (E_APPLY ("cp" 45)
+                                                                                                                       (E_LET (("_t0015" 45) (E_LET (("cp" 46) (R_SELECT 0
+                                                                                                                       ("fib" 43)))
+                                                                                                                       (E_APPLY ("cp" 46)
                                                                                                                        (V_VAR "fib"
-                                                                                                                       42)
+                                                                                                                       43)
                                                                                                                        (V_VAR "z"
-                                                                                                                       43))))
-                                                                                                                       (E_LET (("_t0016" 46) (R_PRIM "IntSub"
+                                                                                                                       44))))
+                                                                                                                       (E_LET (("_t0016" 47) (R_PRIM "IntSub"
                                                                                                                        (V_VAR "n"
-                                                                                                                       41)
+                                                                                                                       42)
                                                                                                                        (V_INT 1)))
-                                                                                                                       (E_LET (("_t0014" 47) (E_LET (("cp" 48) (R_SELECT 0
-                                                                                                                       ("_t0015" 44)))
-                                                                                                                       (E_APPLY ("cp" 48)
+                                                                                                                       (E_LET (("_t0014" 48) (E_LET (("cp" 49) (R_SELECT 0
+                                                                                                                       ("_t0015" 45)))
+                                                                                                                       (E_APPLY ("cp" 49)
                                                                                                                        (V_VAR "_t0015"
-                                                                                                                       44)
+                                                                                                                       45)
                                                                                                                        (V_VAR "_t0016"
-                                                                                                                       46))))
-                                                                                                                       (E_LET (("_t0018" 49) (E_LET (("cp" 50) (R_SELECT 0
-                                                                                                                       ("fib" 42)))
-                                                                                                                       (E_APPLY ("cp" 50)
+                                                                                                                       47))))
+                                                                                                                       (E_LET (("_t0018" 50) (E_LET (("cp" 51) (R_SELECT 0
+                                                                                                                       ("fib" 43)))
+                                                                                                                       (E_APPLY ("cp" 51)
                                                                                                                        (V_VAR "fib"
-                                                                                                                       42)
+                                                                                                                       43)
                                                                                                                        (V_VAR "z"
-                                                                                                                       43))))
-                                                                                                                       (E_LET (("_t0019" 51) (R_PRIM "IntSub"
+                                                                                                                       44))))
+                                                                                                                       (E_LET (("_t0019" 52) (R_PRIM "IntSub"
                                                                                                                        (V_VAR "n"
-                                                                                                                       41)
+                                                                                                                       42)
                                                                                                                        (V_INT 2)))
-                                                                                                                       (E_LET (("_t0017" 52) (E_LET (("cp" 53) (R_SELECT 0
-                                                                                                                       ("_t0018" 49)))
-                                                                                                                       (E_APPLY ("cp" 53)
+                                                                                                                       (E_LET (("_t0017" 53) (E_LET (("cp" 54) (R_SELECT 0
+                                                                                                                       ("_t0018" 50)))
+                                                                                                                       (E_APPLY ("cp" 54)
                                                                                                                        (V_VAR "_t0018"
-                                                                                                                       49)
+                                                                                                                       50)
                                                                                                                        (V_VAR "_t0019"
-                                                                                                                       51))))
-                                                                                                                       (E_LET (("_t0020" 54) (R_PRIM "IntAdd"
+                                                                                                                       52))))
+                                                                                                                       (E_LET (("_t0020" 55) (R_PRIM "IntAdd"
                                                                                                                        (V_VAR "_t0014"
-                                                                                                                       47)
+                                                                                                                       48)
                                                                                                                        (V_VAR "_t0017"
-                                                                                                                       52)))
+                                                                                                                       53)))
                                                                                                                        (E_RET (V_VAR "_t0020"
-                                                                                                                       54)))))))))))))
-                                                                                     (E_LET (("fibY2" 55) (R_TUPLE (V_VAR "fib"
-                                                                                                                       38)
+                                                                                                                       55)))))))))))))
+                                                                                     (E_LET (("fibY2" 56) (R_TUPLE (V_VAR "fibY2_code"
+                                                                                                                       40)
+                                                                                                                   (V_VAR "fib"
+                                                                                                                       39)
                                                                                                                    (V_VAR "z"
-                                                                                                                       37)))
-                                                                                            (E_RET (V_VAR "fibY2" 55))))))
-                                                    (E_LET (("fibY1" 56) (R_TUPLE (V_VAR "fib" 34)))
-                                                           (E_RET (V_VAR "fibY1" 56)))))
-                           (E_LET (("_t0021" 57) (E_LET (("cp" 58) (R_SELECT 0 ("y" 31)))
-                                                        (E_APPLY ("cp" 58) (V_VAR "y" 31) (V_VAR "fibY" 59))))
-                                  (E_LET (("_t0022" 60) (R_TUPLE))
-                                         (E_LET (("fib" 61) (E_LET (("cp" 62) (R_SELECT 0 ("_t0021" 57)))
-                                                                   (E_APPLY ("cp" 62) (V_VAR "_t0021" 57)
-                                                                            (V_VAR "_t0022" 60))))
-                                                (E_LET (("n" 63) (E_RET (V_INT 20)))
-                                                       (E_LET (("fib_n" 64) (E_LET (("cp" 65) (R_SELECT 0 ("fib" 61)))
-                                                                                   (E_APPLY ("cp" 65) (V_VAR "fib" 61)
-                                                                                            (V_VAR "n" 63))))
-                                                              (E_LET (("un" 66) (R_CALL "_mml_print"
-                                                                                        (V_STR "fib\x20;")))
-                                                                     (E_LET (("_t0023" 67) (E_LET (("cp" 68) (R_SELECT 0
+                                                                                                                       38)))
+                                                                                            (E_RET (V_VAR "fibY2" 56))))))
+                                                    (E_LET (("fibY1" 57) (R_TUPLE (V_VAR "fibY1_code" 36)
+                                                                                  (V_VAR "fib" 35)))
+                                                           (E_RET (V_VAR "fibY1" 57)))))
+                           (E_LET (("fibY" 58) (R_TUPLE (V_VAR "fibY_code" 33)))
+                                  (E_LET (("_t0021" 59) (E_LET (("cp" 60) (R_SELECT 0 ("y" 31)))
+                                                               (E_APPLY ("cp" 60) (V_VAR "y" 31) (V_VAR "fibY" 58))))
+                                         (E_LET (("_t0022" 61) (R_TUPLE))
+                                                (E_LET (("fib" 62) (E_LET (("cp" 63) (R_SELECT 0 ("_t0021" 59)))
+                                                                          (E_APPLY ("cp" 63) (V_VAR "_t0021" 59)
+                                                                                   (V_VAR "_t0022" 61))))
+                                                       (E_LET (("n" 64) (E_RET (V_INT 20)))
+                                                              (E_LET (("fib_n" 65) (E_LET (("cp" 66) (R_SELECT 0
+                                                                                                               ("fib" 62)))
+                                                                                          (E_APPLY ("cp" 66)
+                                                                                                   (V_VAR "fib" 62)
+                                                                                                   (V_VAR "n" 64))))
+                                                                     (E_LET (("un" 67) (R_CALL "_mml_print"
+                                                                                               (V_STR "fib\x20;")))
+                                                                            (E_LET (("_t0023" 68) (E_LET (("cp" 69) (R_SELECT 0
                                                                                                                        ("intToString" 6)))
-                                                                                                  (E_APPLY ("cp" 68)
-                                                                                                           (V_VAR "intToString"
-                                                                                                                  6)
-                                                                                                           (V_VAR "n"
-                                                                                                                  63))))
-                                                                            (E_LET (("un" 69) (R_CALL "_mml_print"
-                                                                                                      (V_VAR "_t0023"
-                                                                                                             67)))
+                                                                                                         (E_APPLY ("cp" 69)
+                                                                                                                  (V_VAR "intToString"
+                                                                                                                       6)
+                                                                                                                  (V_VAR "n"
+                                                                                                                       64))))
                                                                                    (E_LET (("un" 70) (R_CALL "_mml_print"
-                                                                                                             (V_STR "\x20;=\x20;")))
-                                                                                          (E_LET (("_t0024" 71) (E_LET (("cp" 72) (R_SELECT 0
+                                                                                                             (V_VAR "_t0023"
+                                                                                                                    68)))
+                                                                                          (E_LET (("un" 71) (R_CALL "_mml_print"
+                                                                                                                    (V_STR "\x20;=\x20;")))
+                                                                                                 (E_LET (("_t0024" 72) (E_LET (("cp" 73) (R_SELECT 0
                                                                                                                        ("intToString" 6)))
-                                                                                                                       (E_APPLY ("cp" 72)
+                                                                                                                       (E_APPLY ("cp" 73)
                                                                                                                        (V_VAR "intToString"
                                                                                                                        6)
                                                                                                                        (V_VAR "fib_n"
-                                                                                                                       64))))
-                                                                                                 (E_LET (("un" 73) (R_CALL "_mml_print"
-                                                                                                                       (V_VAR "_t0024"
-                                                                                                                       71)))
+                                                                                                                       65))))
                                                                                                         (E_LET (("un" 74) (R_CALL "_mml_print"
+                                                                                                                       (V_VAR "_t0024"
+                                                                                                                       72)))
+                                                                                                               (E_LET (("un" 75) (R_CALL "_mml_print"
                                                                                                                        (V_STR "\n")))
-                                                                                                               (E_RET (V_INT 0))))))))))))))))))
+                                                                                                                      (E_RET (V_INT 0)))))))))))))))))))

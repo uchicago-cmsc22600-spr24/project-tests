@@ -1,0 +1,188 @@
+(PROG (("arguments" 0))
+      (E_FUN (("intToString" 1) (("i" 2))
+                                (E_IF ("IntLt" (V_VAR "i" 2) (V_INT 0))
+                                      (E_LET (("_t0001" 3) (R_PRIM "IntNeg" (V_VAR "i" 2)))
+                                             (E_LET (("_t0000" 4) (E_APPLY ("intToString" 1) (V_VAR "_t0001" 3)))
+                                                    (E_LET (("_t0002" 5) (R_CALL "_mml_concat" (V_STR "-")
+                                                                                 (V_VAR "_t0000" 4)))
+                                                           (E_RET (V_VAR "_t0002" 5)))))
+                                      (E_IF ("IntEq" (V_VAR "i" 2) (V_INT 0)) (E_RET (V_STR "0"))
+                                            (E_IF ("IntEq" (V_VAR "i" 2) (V_INT 1)) (E_RET (V_STR "1"))
+                                                  (E_IF ("IntEq" (V_VAR "i" 2) (V_INT 2)) (E_RET (V_STR "2"))
+                                                        (E_IF ("IntEq" (V_VAR "i" 2) (V_INT 3)) (E_RET (V_STR "3"))
+                                                              (E_IF ("IntEq" (V_VAR "i" 2) (V_INT 4))
+                                                                    (E_RET (V_STR "4"))
+                                                                    (E_IF ("IntEq" (V_VAR "i" 2) (V_INT 5))
+                                                                          (E_RET (V_STR "5"))
+                                                                          (E_IF ("IntEq" (V_VAR "i" 2) (V_INT 6))
+                                                                                (E_RET (V_STR "6"))
+                                                                                (E_IF ("IntEq" (V_VAR "i" 2) (V_INT 7))
+                                                                                      (E_RET (V_STR "7"))
+                                                                                      (E_IF ("IntEq" (V_VAR "i" 2)
+                                                                                                     (V_INT 8))
+                                                                                            (E_RET (V_STR "8"))
+                                                                                            (E_IF ("IntEq" (V_VAR "i"
+                                                                                                                  2)
+                                                                                                           (V_INT 9))
+                                                                                                  (E_RET (V_STR "9"))
+                                                                                                  (E_LET (("_t0004" 6) (E_IF ("IntNEq" (V_INT 10)
+                                                                                                                       (V_INT 0))
+                                                                                                                       (E_LET (("_t0005" 7) (R_PRIM "IntDiv"
+                                                                                                                       (V_VAR "i"
+                                                                                                                       2)
+                                                                                                                       (V_INT 10)))
+                                                                                                                       (E_RET (V_VAR "_t0005"
+                                                                                                                       7)))
+                                                                                                                       (E_LET (("_t0006" 8) (R_CALL "_mml_fail"
+                                                                                                                       (V_STR "Divide\x20;by\x20;zero")))
+                                                                                                                       (E_RET (V_VAR "_t0006"
+                                                                                                                       8)))))
+                                                                                                         (E_LET (("_t0003" 9) (E_APPLY ("intToString" 1)
+                                                                                                                       (V_VAR "_t0004"
+                                                                                                                       6)))
+                                                                                                                (E_LET (("_t0008" 10) (E_IF ("IntNEq" (V_INT 10)
+                                                                                                                       (V_INT 0))
+                                                                                                                       (E_LET (("_t0009" 11) (R_PRIM "IntMod"
+                                                                                                                       (V_VAR "i"
+                                                                                                                       2)
+                                                                                                                       (V_INT 10)))
+                                                                                                                       (E_RET (V_VAR "_t0009"
+                                                                                                                       11)))
+                                                                                                                       (E_LET (("_t0010" 12) (R_CALL "_mml_fail"
+                                                                                                                       (V_STR "Remainder\x20;by\x20;zero")))
+                                                                                                                       (E_RET (V_VAR "_t0010"
+                                                                                                                       12)))))
+                                                                                                                       (E_LET (("_t0007" 13) (E_APPLY ("intToString" 1)
+                                                                                                                       (V_VAR "_t0008"
+                                                                                                                       10)))
+                                                                                                                       (E_LET (("_t0011" 14) (R_CALL "_mml_concat"
+                                                                                                                       (V_VAR "_t0003"
+                                                                                                                       9)
+                                                                                                                       (V_VAR "_t0007"
+                                                                                                                       13)))
+                                                                                                                       (E_RET (V_VAR "_t0011"
+                                                                                                                       14)))))))))))))))))))
+             (E_FUN (("foldl" 15) (("f" 16))
+                                  (E_FUN (("foldl1" 17) (("b" 18))
+                                                        (E_FUN (("foldl2" 19) (("l" 20))
+                                                                              (E_CASE (V_VAR "l" 20)
+                                                                                      (((P_DCON ("Nil" 0)) (E_RET (V_VAR "b"
+                                                                                                                       18))) ((P_DCON ("Cons" 1)
+                                                                                                                       ("hd" 21)
+                                                                                                                       ("tl" 22)) (E_LET (("_t0012" 23) (E_APPLY ("foldl" 15)
+                                                                                                                       (V_VAR "f"
+                                                                                                                       16)))
+                                                                                                                       (E_LET (("_t0015" 24) (E_APPLY ("f" 16)
+                                                                                                                       (V_VAR "hd"
+                                                                                                                       21)))
+                                                                                                                       (E_LET (("_t0014" 25) (E_APPLY ("_t0015" 24)
+                                                                                                                       (V_VAR "b"
+                                                                                                                       18)))
+                                                                                                                       (E_LET (("_t0013" 26) (E_APPLY ("_t0012" 23)
+                                                                                                                       (V_VAR "_t0014"
+                                                                                                                       25)))
+                                                                                                                       (E_APPLY ("_t0013" 26)
+                                                                                                                       (V_VAR "tl"
+                                                                                                                       22))))))))))
+                                                               (E_RET (V_VAR "foldl2" 19))))
+                                         (E_RET (V_VAR "foldl1" 17))))
+                    (E_FUN (("rev" 27) (("xs" 28))
+                                       (E_FUN (("cons" 29) (("hd" 30))
+                                                           (E_FUN (("cons1" 31) (("tl" 32))
+                                                                                (E_LET (("_t0016" 33) (R_DCON ("Cons" 1)
+                                                                                                              (V_VAR "hd"
+                                                                                                                     30)
+                                                                                                              (V_VAR "tl"
+                                                                                                                     32)))
+                                                                                       (E_RET (V_VAR "_t0016" 33))))
+                                                                  (E_RET (V_VAR "cons1" 31))))
+                                              (E_LET (("_t0017" 34) (E_APPLY ("foldl" 15) (V_VAR "cons" 29)))
+                                                     (E_LET (("_t0018" 35) (E_APPLY ("_t0017" 34) (V_CON "Nil" 0)))
+                                                            (E_APPLY ("_t0018" 35) (V_VAR "xs" 28))))))
+                           (E_FUN (("tabulate" 36) (("tpl" 37))
+                                                   (E_LET (("n" 38) (R_SELECT 0 ("tpl" 37)))
+                                                          (E_LET (("f" 39) (R_SELECT 1 ("tpl" 37)))
+                                                                 (E_FUN (("loop" 40) (("tpl" 41))
+                                                                                     (E_LET (("i" 42) (R_SELECT 0
+                                                                                                                ("tpl" 41)))
+                                                                                            (E_LET (("acc" 43) (R_SELECT 1
+                                                                                                                       ("tpl" 41)))
+                                                                                                   (E_IF ("IntLte" (V_VAR "i"
+                                                                                                                       42)
+                                                                                                                   (V_VAR "n"
+                                                                                                                       38))
+                                                                                                         (E_LET (("_t0020" 44) (R_PRIM "IntAdd"
+                                                                                                                       (V_VAR "i"
+                                                                                                                       42)
+                                                                                                                       (V_INT 1)))
+                                                                                                                (E_LET (("_t0022" 45) (E_APPLY ("f" 39)
+                                                                                                                       (V_VAR "i"
+                                                                                                                       42)))
+                                                                                                                       (E_LET (("_t0021" 46) (R_DCON ("Cons" 1)
+                                                                                                                       (V_VAR "_t0022"
+                                                                                                                       45)
+                                                                                                                       (V_VAR "acc"
+                                                                                                                       43)))
+                                                                                                                       (E_LET (("_t0019" 47) (R_TUPLE (V_VAR "_t0020"
+                                                                                                                       44)
+                                                                                                                       (V_VAR "_t0021"
+                                                                                                                       46)))
+                                                                                                                       (E_APPLY ("loop" 40)
+                                                                                                                       (V_VAR "_t0019"
+                                                                                                                       47))))))
+                                                                                                         (E_APPLY ("rev" 27)
+                                                                                                                  (V_VAR "acc"
+                                                                                                                       43))))))
+                                                                        (E_IF ("IntLt" (V_VAR "n" 38) (V_INT 0))
+                                                                              (E_LET (("_t0023" 48) (R_CALL "_mml_fail"
+                                                                                                            (V_STR "tabulate:\x20;n\x20;<\x20;0")))
+                                                                                     (E_RET (V_VAR "_t0023" 48)))
+                                                                              (E_LET (("_t0024" 49) (R_TUPLE (V_INT 0)
+                                                                                                             (V_CON "Nil"
+                                                                                                                    0)))
+                                                                                     (E_APPLY ("loop" 40)
+                                                                                              (V_VAR "_t0024" 49))))))))
+                                  (E_LET (("n" 50) (E_RET (V_INT 4999)))
+                                         (E_FUN (("f" 51) (("x" 52))
+                                                          (E_FUN (("f1" 53) (("y" 54))
+                                                                            (E_LET (("_t0025" 55) (R_PRIM "IntAdd"
+                                                                                                          (V_VAR "x"
+                                                                                                                 52)
+                                                                                                          (V_VAR "y"
+                                                                                                                 54)))
+                                                                                   (E_RET (V_VAR "_t0025" 55))))
+                                                                 (E_RET (V_VAR "f1" 53))))
+                                                (E_FUN (("g" 56) (("i" 57)) (E_RET (V_VAR "i" 57)))
+                                                       (E_LET (("_t0026" 58) (E_APPLY ("foldl" 15) (V_VAR "f" 51)))
+                                                              (E_LET (("_t0027" 59) (E_APPLY ("_t0026" 58) (V_INT 0)))
+                                                                     (E_LET (("_t0029" 60) (R_TUPLE (V_VAR "n" 50)
+                                                                                                    (V_VAR "g" 56)))
+                                                                            (E_LET (("_t0028" 61) (E_APPLY ("tabulate" 36)
+                                                                                                           (V_VAR "_t0029"
+                                                                                                                  60)))
+                                                                                   (E_LET (("sum_n" 62) (E_APPLY ("_t0027" 59)
+                                                                                                                 (V_VAR "_t0028"
+                                                                                                                       61)))
+                                                                                          (E_LET (("un" 63) (R_CALL "_mml_print"
+                                                                                                                    (V_STR "foldl\x20;\n")))
+                                                                                                 (E_LET (("un" 64) (R_CALL "_mml_print"
+                                                                                                                       (V_STR "\x20;\x20;\x20;\x20;\x20;\x20;(fn\x20;x\x20;y\x20;=>\x20;x\x20;+\x20;y)\n")))
+                                                                                                        (E_LET (("un" 65) (R_CALL "_mml_print"
+                                                                                                                       (V_STR "\x20;\x20;\x20;\x20;\x20;\x20;0\x20;(tabulate\x20;(")))
+                                                                                                               (E_LET (("_t0030" 66) (E_APPLY ("intToString" 1)
+                                                                                                                       (V_VAR "n"
+                                                                                                                       50)))
+                                                                                                                      (E_LET (("un" 67) (R_CALL "_mml_print"
+                                                                                                                       (V_VAR "_t0030"
+                                                                                                                       66)))
+                                                                                                                       (E_LET (("un" 68) (R_CALL "_mml_print"
+                                                                                                                       (V_STR ",\x20;(fn\x20;i\x20;=>\x20;i)))\x20;=\x20;")))
+                                                                                                                       (E_LET (("_t0031" 69) (E_APPLY ("intToString" 1)
+                                                                                                                       (V_VAR "sum_n"
+                                                                                                                       62)))
+                                                                                                                       (E_LET (("un" 70) (R_CALL "_mml_print"
+                                                                                                                       (V_VAR "_t0031"
+                                                                                                                       69)))
+                                                                                                                       (E_LET (("un" 71) (R_CALL "_mml_print"
+                                                                                                                       (V_STR "\n")))
+                                                                                                                       (E_RET (V_INT 0))))))))))))))))))))))))

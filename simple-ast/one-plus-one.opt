@@ -1,0 +1,2 @@
+(PROG (("arguments" 0))
+      (E_LET (("_" 1) (R_PRIM "IntAdd" (V_INT 1) (V_INT 1))) (E_LET (("un" 2) (R_TUPLE)) (E_RET (V_INT 0)))))
