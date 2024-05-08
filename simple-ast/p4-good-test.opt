@@ -1,0 +1,8 @@
+(PROG (("arguments" 0))
+      (E_FUN (("f" 1) (("a" 2))
+                      (E_FUN (("f1" 3) (("b" 4))
+                                       (E_LET (("_t0000" 5) (R_PRIM "IntAdd" (V_VAR "a" 2) (V_VAR "b" 4)))
+                                              (E_RET (V_VAR "_t0000" 5)))) (E_RET (V_VAR "f1" 3))))
+             (E_FUN (("g" 6) (("h" 7)) (E_APPLY ("h" 7) (V_INT 42)))
+                    (E_LET (("_t0001" 8) (E_APPLY ("f" 1) (V_INT 17)))
+                           (E_LET (("x" 9) (E_APPLY ("g" 6) (V_VAR "_t0001" 8))) (E_RET (V_INT 0)))))))
