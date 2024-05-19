@@ -1,0 +1,11 @@
+(PROG (("arguments" 0))
+      (E_FUN (("f_code" 1) (("tpl" 2))
+                           (E_LET (("x" 3) (R_SELECT 0 ("tpl" 2)))
+                                  (E_LET (("y" 4) (R_SELECT 1 ("tpl" 2)))
+                                         (E_CASE (V_VAR "x" 3)
+                                                 (((P_DCON ("A" 0)) (E_RET (V_INT 1))) ((P_DCON ("B" 1)) (E_RET (V_INT 2)))
+                                                                                       ((P_DCON ("F" 2) ("z" 5)) (E_RET (V_VAR "z"
+                                                                                                                       5)))
+                                                                                       ((P_VAR "w" 6) (E_RET (V_VAR "y"
+                                                                                                                    4))))))))
+             (E_RET (V_INT 0))))

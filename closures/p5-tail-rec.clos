@@ -1,0 +1,22 @@
+program (arguments006C) =
+   fun f_code0079 (n006E) =
+      fun lp_code007B (lp007C,x0070) =
+         let n007D = #1(lp007C) in
+            if IntLt(x0070,0) then
+               ret x0070
+            else
+               let _t00071 = IntSub(x0070,n007D) in
+                  lp_code007B (lp007C,_t00071)
+      in
+      let lp006F = [lp_code007B,n006E] in
+         ret lp006F
+   in
+   fun ignore_code007A (x0073) =
+      let _t10074 = [] in
+         ret _t10074
+   in
+   let _t20076 = f_code0079 (42) in
+   let un0075 = ignore_code007A (_t20076) in
+   let _t30078 = f_code0079 (17) in
+   let un0077 = ignore_code007A (_t30078) in
+      ret 0

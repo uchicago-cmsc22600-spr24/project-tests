@@ -1,0 +1,54 @@
+program (arguments006C) =
+   fun check_code0093 (tpl006E) =
+      let msg006F = #0(tpl006E) in
+      let result0070 = #1(tpl006E) in
+      let expected0071 = #2(tpl006E) in
+      let un0072 = call _mml_print("test ") in
+      let un0073 = call _mml_print(msg006F) in
+         if IntEq(result0070,expected0071) then
+            let _t00074 = call _mml_print(" OK\n") in
+               ret _t00074
+         else
+            let _t10075 = call _mml_print(" FAIL\n") in
+               ret _t10075
+   in
+   let _t30078 = IntAdd(1,1) in
+   let _t20077 = ["1+1",_t30078,2] in
+   let un0076 = check_code0093 (_t20077) in
+   let _t5007B = IntAdd(1,2) in
+   let _t4007A = ["1+2",_t5007B,3] in
+   let un0079 = check_code0093 (_t4007A) in
+   let _t7007E = IntSub(1,1) in
+   let _t6007D = ["1-1",_t7007E,0] in
+   let un007C = check_code0093 (_t6007D) in
+   let _t90081 = IntSub(1,2) in
+   let _t100082 = IntNeg(1) in
+   let _t80080 = ["1-2",_t90081,_t100082] in
+   let un007F = check_code0093 (_t80080) in
+   let _t120085 = IntMul(1,1) in
+   let _t110084 = ["1*1",_t120085,1] in
+   let un0083 = check_code0093 (_t110084) in
+   let _t140088 = IntMul(12,4) in
+   let _t130087 = ["12*4",_t140088,48] in
+   let un0086 = check_code0093 (_t130087) in
+   let _t16008B =
+      if IntNEq(4,0) then
+         let _t17008C = IntDiv(12,4) in
+            ret _t17008C
+      else
+         let _t18008D = call _mml_fail("Divide by zero") in
+            ret _t18008D
+   in
+   let _t15008A = ["12/4",_t16008B,3] in
+   let un0089 = check_code0093 (_t15008A) in
+   let _t200090 =
+      if IntNEq(5,0) then
+         let _t210091 = IntDiv(12,5) in
+            ret _t210091
+      else
+         let _t220092 = call _mml_fail("Divide by zero") in
+            ret _t220092
+   in
+   let _t19008F = ["12/5",_t200090,2] in
+   let un008E = check_code0093 (_t19008F) in
+      ret 0

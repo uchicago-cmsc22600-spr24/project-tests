@@ -1,0 +1,42 @@
+(PROG (("arguments" 0))
+      (E_FUN (("repeat_code" 1) (("tpl" 2))
+                                (E_LET (("f" 3) (R_SELECT 0 ("tpl" 2)))
+                                       (E_LET (("n" 4) (R_SELECT 1 ("tpl" 2)))
+                                              (E_FUN (("lp_code" 5) (("lp" 6) ("i" 7))
+                                                                    (E_LET (("f" 8) (R_SELECT 0 ("lp" 6)))
+                                                                           (E_LET (("n" 9) (R_SELECT 1 ("lp" 6)))
+                                                                                  (E_IF ("IntLt" (V_VAR "i" 7)
+                                                                                                 (V_VAR "n" 9))
+                                                                                        (E_LET (("cp" 10) (R_SELECT 0
+                                                                                                                    ("f" 8)))
+                                                                                               (E_LET (("un" 11) (E_APPLY ("cp" 10)
+                                                                                                                       (V_VAR "f"
+                                                                                                                       8)
+                                                                                                                       (V_VAR "i"
+                                                                                                                       7)))
+                                                                                                      (E_LET (("_t0" 12) (R_PRIM "IntAdd"
+                                                                                                                       (V_VAR "i"
+                                                                                                                       7)
+                                                                                                                       (V_INT 1)))
+                                                                                                             (E_APPLY ("lp_code" 5)
+                                                                                                                      (V_VAR "lp"
+                                                                                                                       6)
+                                                                                                                      (V_VAR "_t0"
+                                                                                                                       12)))))
+                                                                                        (E_LET (("_t1" 13) (R_TUPLE))
+                                                                                               (E_RET (V_VAR "_t1" 13)))))))
+                                                     (E_LET (("lp" 14) (R_TUPLE (V_VAR "f" 3) (V_VAR "n" 4)))
+                                                            (E_APPLY ("lp_code" 5) (V_VAR "lp" 14) (V_INT 0)))))))
+             (E_FUN (("ignore_code" 15) (("ignore" 16) ("x" 17))
+                                        (E_LET (("_t2" 18) (R_TUPLE)) (E_RET (V_VAR "_t2" 18))))
+                    (E_LET (("ignore" 19) (R_TUPLE (V_VAR "ignore_code" 15)))
+                           (E_LET (("_t4" 20) (R_TUPLE (V_VAR "ignore" 19) (V_INT 5)))
+                                  (E_LET (("_t3" 21) (E_APPLY ("repeat_code" 1) (V_VAR "_t4" 20)))
+                                         (E_LET (("un" 22) (E_APPLY ("ignore_code" 15) (V_VAR "ignore" 19)
+                                                                    (V_VAR "_t3" 21)))
+                                                (E_LET (("_t6" 23) (R_TUPLE (V_VAR "ignore" 19) (V_INT 6)))
+                                                       (E_LET (("_t5" 24) (E_APPLY ("repeat_code" 1) (V_VAR "_t6" 23)))
+                                                              (E_LET (("un" 25) (E_APPLY ("ignore_code" 15)
+                                                                                         (V_VAR "ignore" 19)
+                                                                                         (V_VAR "_t5" 24)))
+                                                                     (E_RET (V_INT 0))))))))))))

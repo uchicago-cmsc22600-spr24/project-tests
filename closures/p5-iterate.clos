@@ -1,0 +1,31 @@
+program (arguments0075) =
+   fun repeat_code0088 (tpl0077) =
+      let f0078 = #0(tpl0077) in
+      let n0079 = #1(tpl0077) in
+      fun lp_code008B (lp008C,i007B) =
+         let f008D = #0(lp008C) in
+         let n008E = #1(lp008C) in
+            if IntLt(i007B,n008E) then
+               let cp008F = #0(f008D) in
+               let un007C = cp008F (f008D,i007B) in
+               let _t0007D = IntAdd(i007B,1) in
+                  lp_code008B (lp008C,_t0007D)
+            else
+               let _t1007E = [] in
+                  ret _t1007E
+      in
+      let lp007A = [f0078,n0079] in
+         lp_code008B (lp007A,0)
+   in
+   fun ignore_code0089 (ignore008A,x0080) =
+      let _t20081 = [] in
+         ret _t20081
+   in
+   let ignore007F = [ignore_code0089] in
+   let _t40084 = [ignore007F,5] in
+   let _t30083 = repeat_code0088 (_t40084) in
+   let un0082 = ignore_code0089 (ignore007F,_t30083) in
+   let _t60087 = [ignore007F,6] in
+   let _t50086 = repeat_code0088 (_t60087) in
+   let un0085 = ignore_code0089 (ignore007F,_t50086) in
+      ret 0

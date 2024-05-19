@@ -1,0 +1,11 @@
+program (arguments0073) =
+   fun f_code007A (tpl0075) =
+      let x0076 = #0(tpl0075) in
+      let y0077 = #1(tpl0075) in
+         case x0076 of
+         | A => ret 1
+         | B => ret 2
+         | F(z0078) => ret z0078
+         | w0079 => ret y0077
+         end
+   in ret 0

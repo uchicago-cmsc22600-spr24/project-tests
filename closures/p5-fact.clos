@@ -1,0 +1,19 @@
+program (arguments0066) =
+   fun fact_code0073 (n0068) =
+      if IntLte(n0068,1) then
+         ret 1
+      else
+         let _t1006A = IntSub(n0068,1) in
+         let _t00069 = fact_code0073 (_t1006A) in
+         let _t2006B = IntMul(n0068,_t00069) in
+            ret _t2006B
+   in
+   fun ignore_code0074 (x006D) =
+      let _t3006E = [] in
+         ret _t3006E
+   in
+   let _t40070 = fact_code0073 (5) in
+   let un006F = ignore_code0074 (_t40070) in
+   let _t50072 = fact_code0073 (6) in
+   let un0071 = ignore_code0074 (_t50072) in
+      ret 0
