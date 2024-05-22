@@ -1,0 +1,116 @@
+program (arguments00C9) =
+   fun fst_code010D (p00CB) =
+      let a00CC = #0(p00CB) in
+      let _00CD = #1(p00CB) in
+         ret a00CC
+   in
+   fun snd_code010E (p00CF) =
+      let _00D0 = #0(p00CF) in
+      let b00D1 = #1(p00CF) in
+         ret b00D1
+   in
+   fun length_code0107 (l00D3) =
+      case l00D3 of
+      | Nil => ret 0
+      | Cons(_00D5,r00D4) =>
+         let _t000D6 = length_code0107 (r00D4) in
+         let _t100D7 = IntAdd(1,_t000D6) in
+            ret _t100D7
+      end
+   in
+   fun appi_code0109 (f00D9) =
+      fun appi1_code010F (appi10110,l00DB) =
+         let f0111 = #1(appi10110) in
+         fun appf_code0112 (appf0113,arg00DD) =
+            let f0114 = #0(appf0113) in
+            let _t200DE = snd_code010E (arg00DD) in
+               case _t200DE of
+               | Nil =>
+                  let _t300DF = [] in
+                     ret _t300DF
+               | Cons(x00E1,xs00E0) =>
+                  let i00E2 = fst_code010D (arg00DD) in
+                  let _t400E4 = [i00E2,x00E1] in
+                  let cp0115 = #0(f0114) in
+                  let un00E3 = cp0115 (f0114,_t400E4) in
+                  let _t600E6 = IntAdd(i00E2,1) in
+                  let _t500E5 = [_t600E6,xs00E0] in
+                     appf_code0112 (appf0113,_t500E5)
+               end
+         in
+         let appf00DC = [f0111] in
+         let _t700E7 = [0,l00DB] in
+            appf_code0112 (appf00DC,_t700E7)
+      in
+      let appi100DA = [appi1_code010F,f00D9] in
+         ret appi100DA
+   in
+   fun intToString_code0108 (i00E9) =
+      if IntLt(i00E9,0) then
+         let _t900EB = IntNeg(i00E9) in
+         let _t800EA = intToString_code0108 (_t900EB) in
+         let _t1000EC = call _mml_concat("-",_t800EA) in
+            ret _t1000EC
+      else if IntEq(i00E9,0) then
+         ret "0"
+      else if IntEq(i00E9,1) then
+         ret "1"
+      else if IntEq(i00E9,2) then
+         ret "2"
+      else if IntEq(i00E9,3) then
+         ret "3"
+      else if IntEq(i00E9,4) then
+         ret "4"
+      else if IntEq(i00E9,5) then
+         ret "5"
+      else if IntEq(i00E9,6) then
+         ret "6"
+      else if IntEq(i00E9,7) then
+         ret "7"
+      else if IntEq(i00E9,8) then
+         ret "8"
+      else if IntEq(i00E9,9) then
+         ret "9"
+      else
+         let _t1200EE =
+            if IntNEq(10,0) then
+               let _t1300EF = IntDiv(i00E9,10) in
+                  ret _t1300EF
+            else
+               let _t1400F0 = call _mml_fail("Divide by zero") in
+                  ret _t1400F0
+         in
+         let _t1100ED = intToString_code0108 (_t1200EE) in
+         let _t1600F2 =
+            if IntNEq(10,0) then
+               let _t1700F3 = IntMod(i00E9,10) in
+                  ret _t1700F3
+            else
+               let _t1800F4 = call _mml_fail("Remainder by zero") in
+                  ret _t1800F4
+         in
+         let _t1500F1 = intToString_code0108 (_t1600F2) in
+         let _t1900F5 = call _mml_concat(_t1100ED,_t1500F1) in
+            ret _t1900F5
+   in
+   fun printArg_code010B (printArg010C,arg00F7) =
+      let un00F8 = call _mml_print("arg ") in
+      let _t2100FB = fst_code010D (arg00F7) in
+      let _t2000FA = intToString_code0108 (_t2100FB) in
+      let un00F9 = call _mml_print(_t2000FA) in
+      let un00FC = call _mml_print(" = ") in
+      let _t2200FE = snd_code010E (arg00F7) in
+      let un00FD = call _mml_print(_t2200FE) in
+      let _t2300FF = call _mml_print("\n") in
+         ret _t2300FF
+   in
+   let printArg00F6 = [printArg_code010B] in
+   let nArgs0100 = length_code0107 (arguments00C9) in
+   let _t260104 = intToString_code0108 (nArgs0100) in
+   let _t250103 = call _mml_concat(_t260104,"\n") in
+   let _t240102 = call _mml_concat("# args = ",_t250103) in
+   let un0101 = call _mml_print(_t240102) in
+   let _t270106 = appi_code0109 (printArg00F6) in
+   let cp010A = #0(_t270106) in
+   let un0105 = cp010A (_t270106,arguments00C9) in
+      ret 0

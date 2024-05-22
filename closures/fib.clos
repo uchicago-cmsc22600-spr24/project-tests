@@ -1,0 +1,70 @@
+program (arguments0073) =
+   fun intToString_code0093 (i0075) =
+      if IntLt(i0075,0) then
+         let _t10077 = IntNeg(i0075) in
+         let _t00076 = intToString_code0093 (_t10077) in
+         let _t20078 = call _mml_concat("-",_t00076) in
+            ret _t20078
+      else if IntEq(i0075,0) then
+         ret "0"
+      else if IntEq(i0075,1) then
+         ret "1"
+      else if IntEq(i0075,2) then
+         ret "2"
+      else if IntEq(i0075,3) then
+         ret "3"
+      else if IntEq(i0075,4) then
+         ret "4"
+      else if IntEq(i0075,5) then
+         ret "5"
+      else if IntEq(i0075,6) then
+         ret "6"
+      else if IntEq(i0075,7) then
+         ret "7"
+      else if IntEq(i0075,8) then
+         ret "8"
+      else if IntEq(i0075,9) then
+         ret "9"
+      else
+         let _t4007A =
+            if IntNEq(10,0) then
+               let _t5007B = IntDiv(i0075,10) in
+                  ret _t5007B
+            else
+               let _t6007C = call _mml_fail("Divide by zero") in
+                  ret _t6007C
+         in
+         let _t30079 = intToString_code0093 (_t4007A) in
+         let _t8007E =
+            if IntNEq(10,0) then
+               let _t9007F = IntMod(i0075,10) in
+                  ret _t9007F
+            else
+               let _t100080 = call _mml_fail("Remainder by zero") in
+                  ret _t100080
+         in
+         let _t7007D = intToString_code0093 (_t8007E) in
+         let _t110081 = call _mml_concat(_t30079,_t7007D) in
+            ret _t110081
+   in
+   fun fib_code0092 (n0083) =
+      if IntLte(n0083,1) then
+         ret 1
+      else
+         let _t130085 = IntSub(n0083,1) in
+         let _t120084 = fib_code0092 (_t130085) in
+         let _t150087 = IntSub(n0083,2) in
+         let _t140086 = fib_code0092 (_t150087) in
+         let _t160088 = IntAdd(_t120084,_t140086) in
+            ret _t160088
+   in
+   let n0089 = ret 20 in
+   let fib_n008A = fib_code0092 (n0089) in
+   let un008B = call _mml_print("fib ") in
+   let _t17008D = intToString_code0093 (n0089) in
+   let un008C = call _mml_print(_t17008D) in
+   let un008E = call _mml_print(" = ") in
+   let _t180090 = intToString_code0093 (fib_n008A) in
+   let un008F = call _mml_print(_t180090) in
+   let un0091 = call _mml_print("\n") in
+      ret 0

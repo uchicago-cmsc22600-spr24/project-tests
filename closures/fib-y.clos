@@ -1,0 +1,105 @@
+program (arguments0099) =
+   fun intToString_code00CA (i009B) =
+      if IntLt(i009B,0) then
+         let _t1009D = IntNeg(i009B) in
+         let _t0009C = intToString_code00CA (_t1009D) in
+         let _t2009E = call _mml_concat("-",_t0009C) in
+            ret _t2009E
+      else if IntEq(i009B,0) then
+         ret "0"
+      else if IntEq(i009B,1) then
+         ret "1"
+      else if IntEq(i009B,2) then
+         ret "2"
+      else if IntEq(i009B,3) then
+         ret "3"
+      else if IntEq(i009B,4) then
+         ret "4"
+      else if IntEq(i009B,5) then
+         ret "5"
+      else if IntEq(i009B,6) then
+         ret "6"
+      else if IntEq(i009B,7) then
+         ret "7"
+      else if IntEq(i009B,8) then
+         ret "8"
+      else if IntEq(i009B,9) then
+         ret "9"
+      else
+         let _t400A0 =
+            if IntNEq(10,0) then
+               let _t500A1 = IntDiv(i009B,10) in
+                  ret _t500A1
+            else
+               let _t600A2 = call _mml_fail("Divide by zero") in
+                  ret _t600A2
+         in
+         let _t3009F = intToString_code00CA (_t400A0) in
+         let _t800A4 =
+            if IntNEq(10,0) then
+               let _t900A5 = IntMod(i009B,10) in
+                  ret _t900A5
+            else
+               let _t1000A6 = call _mml_fail("Remainder by zero") in
+                  ret _t1000A6
+         in
+         let _t700A3 = intToString_code00CA (_t800A4) in
+         let _t1100A7 = call _mml_concat(_t3009F,_t700A3) in
+            ret _t1100A7
+   in
+   fun y_code00C7 (f00A9) =
+      fun g_code00D9 (g00DA,z00AB) =
+         let f00DB = #1(g00DA) in
+         let _t1200AC = y_code00C7 (f00DB) in
+         let _t1300AD = [] in
+         let cp00DC = #0(_t1200AC) in
+            cp00DC (_t1200AC,_t1300AD)
+      in
+      let g00AA = [g_code00D9,f00A9] in
+      let cp00D8 = #0(f00A9) in
+         cp00D8 (f00A9,g00AA)
+   in
+   fun fibY_code00CB (fibY00CC,fib00AF) =
+      fun fibY1_code00CD (fibY100CE,z00B1) =
+         let fib00CF = #1(fibY100CE) in
+         fun fibY2_code00D0 (fibY200D1,n00B3) =
+            let fib00D2 = #1(fibY200D1) in
+            let z00D3 = #2(fibY200D1) in
+               if IntLte(n00B3,1) then
+                  ret 1
+               else
+                  let cp00D4 = #0(fib00D2) in
+                  let _t1500B5 = cp00D4 (fib00D2,z00D3) in
+                  let _t1600B6 = IntSub(n00B3,1) in
+                  let cp00D5 = #0(_t1500B5) in
+                  let _t1400B4 = cp00D5 (_t1500B5,_t1600B6) in
+                  let cp00D6 = #0(fib00D2) in
+                  let _t1800B8 = cp00D6 (fib00D2,z00D3) in
+                  let _t1900B9 = IntSub(n00B3,2) in
+                  let cp00D7 = #0(_t1800B8) in
+                  let _t1700B7 = cp00D7 (_t1800B8,_t1900B9) in
+                  let _t2000BA = IntAdd(_t1400B4,_t1700B7) in
+                     ret _t2000BA
+         in
+         let fibY200B2 = [fibY2_code00D0,fib00CF,z00B1] in
+            ret fibY200B2
+      in
+      let fibY100B0 = [fibY1_code00CD,fib00AF] in
+         ret fibY100B0
+   in
+   let fibY00AE = [fibY_code00CB] in
+   let _t2100BC = y_code00C7 (fibY00AE) in
+   let _t2200BD = [] in
+   let cp00C8 = #0(_t2100BC) in
+   let fib00BB = cp00C8 (_t2100BC,_t2200BD) in
+   let n00BE = ret 20 in
+   let cp00C9 = #0(fib00BB) in
+   let fib_n00BF = cp00C9 (fib00BB,n00BE) in
+   let un00C0 = call _mml_print("fib ") in
+   let _t2300C2 = intToString_code00CA (n00BE) in
+   let un00C1 = call _mml_print(_t2300C2) in
+   let un00C3 = call _mml_print(" = ") in
+   let _t2400C5 = intToString_code00CA (fib_n00BF) in
+   let un00C4 = call _mml_print(_t2400C5) in
+   let un00C6 = call _mml_print("\n") in
+      ret 0

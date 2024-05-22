@@ -1,0 +1,4 @@
+program (arguments0054) =
+   let _0055 = IntAdd(1,1) in
+   let un0056 = [] in
+      ret 0

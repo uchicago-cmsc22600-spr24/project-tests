@@ -1,0 +1,21 @@
+program (arguments0068) =
+   fun y_code0072 (f006A) =
+      fun y1_code0073 (y10074,x006C) =
+         let f0075 = #1(y10074) in
+         fun g_code0078 (g0079,x006E) =
+            let f007A = #1(g0079) in
+            let _t0006F = y_code0072 (f007A) in
+            let cp007B = #0(_t0006F) in
+               cp007B (_t0006F,x006E)
+         in
+         let g006D = [g_code0078,f0075] in
+         let cp0076 = #0(f0075) in
+         let _t10070 = cp0076 (f0075,g006D) in
+         let cp0077 = #0(_t10070) in
+            cp0077 (_t10070,x006C)
+      in
+      let y1006B = [y1_code0073,f006A] in
+         ret y1006B
+   in
+   let un0071 = [] in
+      ret 0

@@ -1,0 +1,33 @@
+program (arguments0076) =
+   let hello0077 = ret "Hello" in
+   let goodbye0078 = ret "Goodbye" in
+   let world0079 = ret "world" in
+   let _t2007D = call _mml_concat(world0079,"!\n") in
+   let _t1007C = call _mml_concat(", ",_t2007D) in
+   let _t0007B = call _mml_concat(hello0077,_t1007C) in
+   let _007A = call _mml_print(_t0007B) in
+   fun f_code008C (f008D,n007F) =
+      let goodbye008E = #0(f008D) in
+      let world008F = #1(f008D) in
+      fun loop_code0090 (loop0091,i0081) =
+         let n0092 = #0(loop0091) in
+            if IntLt(i0081,n0092) then
+               let un0082 = call _mml_print(" cruel") in
+               let _t30083 = IntAdd(i0081,1) in
+                  loop_code0090 (loop0091,_t30083)
+            else
+               let _t40084 = [] in
+                  ret _t40084
+      in
+      let loop0080 = [n007F] in
+      let _t50086 = call _mml_concat(goodbye008E,",") in
+      let un0085 = call _mml_print(_t50086) in
+      let un0087 = loop_code0090 (loop0080,0) in
+      let _t70089 = call _mml_concat(world008F,"!\n") in
+      let _t60088 = call _mml_concat(" ",_t70089) in
+      let _t8008A = call _mml_print(_t60088) in
+         ret _t8008A
+   in
+   let f007E = [goodbye0078,world0079] in
+   let un008B = f_code008C (f007E,5) in
+      ret 0

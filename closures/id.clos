@@ -1,0 +1,17 @@
+program (arguments0064) =
+   fun id_code006D (id0070,x0066) = ret x0066
+ in
+   let id0065 = [id_code006D] in
+   let _t00068 = id_code006D (id0065,id0065) in
+   let cp006E = #0(_t00068) in
+   let _t10069 = cp006E (_t00068,id0065) in
+   let cp006F = #0(_t10069) in
+   let n0067 = cp006F (_t10069,42) in
+   let un006A =
+      if IntEq(n0067,42) then
+         let _t2006B = call _mml_print("Ok\n") in
+            ret _t2006B
+      else
+         let _t3006C = call _mml_print("Fail\n") in
+            ret _t3006C
+   in ret 0

@@ -1,0 +1,3 @@
+program (arguments0052) =
+   let un0053 = [] in
+      ret 0

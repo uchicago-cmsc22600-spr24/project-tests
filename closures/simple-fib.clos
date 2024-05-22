@@ -1,0 +1,21 @@
+program (arguments005D) =
+   fun fib_code0069 (n005F) =
+      if IntLte(n005F,1) then
+         ret 1
+      else
+         let _t10061 = IntSub(n005F,1) in
+         let _t00060 = fib_code0069 (_t10061) in
+         let _t30063 = IntSub(n005F,2) in
+         let _t20062 = fib_code0069 (_t30063) in
+         let _t40064 = IntAdd(_t00060,_t20062) in
+            ret _t40064
+   in
+   let _t50066 = fib_code0069 (5) in
+   let un0065 =
+      if IntEq(_t50066,8) then
+         let _t60067 = call _mml_print("Ok\n") in
+            ret _t60067
+      else
+         let _t70068 = call _mml_print("Fail\n") in
+            ret _t70068
+   in ret 0

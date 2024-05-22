@@ -1,0 +1,24 @@
+program (arguments0062) =
+   let zero0063 = ret 0 in
+   let one0064 = ret 1 in
+   fun fact_code006E (fact006F,n0066) =
+      let zero0070 = #0(fact006F) in
+      let one0071 = #1(fact006F) in
+         if IntLte(n0066,zero0070) then
+            ret one0071
+         else
+            let _t10068 = IntSub(n0066,one0071) in
+            let _t00067 = fact_code006E (fact006F,_t10068) in
+            let _t20069 = IntMul(n0066,_t00067) in
+               ret _t20069
+   in
+   let fact0065 = [zero0063,one0064] in
+   let _t3006B = fact_code006E (fact0065,5) in
+   let un006A =
+      if IntEq(_t3006B,120) then
+         let _t4006C = call _mml_print("Ok\n") in
+            ret _t4006C
+      else
+         let _t5006D = call _mml_print("Fail\n") in
+            ret _t5006D
+   in ret 0

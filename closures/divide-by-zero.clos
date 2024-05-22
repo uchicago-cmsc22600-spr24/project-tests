@@ -1,0 +1,9 @@
+program (arguments0054) =
+   let _0055 =
+      if IntNEq(0,0) then
+         let _t00056 = IntDiv(42,0) in
+            ret _t00056
+      else
+         let _t10057 = call _mml_fail("Divide by zero") in
+            ret _t10057
+   in ret 0

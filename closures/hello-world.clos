@@ -1,0 +1,3 @@
+program (arguments0053) =
+   let un0054 = call _mml_print("hello world\n") in
+      ret 0

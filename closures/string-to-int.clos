@@ -1,0 +1,154 @@
+program (arguments00BA) =
+   fun intToString_code010B (intToString010C,i00BC) =
+      if IntLt(i00BC,0) then
+         let _t100BE = IntNeg(i00BC) in
+         let _t000BD = intToString_code010B (intToString010C,_t100BE) in
+         let _t200BF = call _mml_concat("-",_t000BD) in
+            ret _t200BF
+      else if IntEq(i00BC,0) then
+         ret "0"
+      else if IntEq(i00BC,1) then
+         ret "1"
+      else if IntEq(i00BC,2) then
+         ret "2"
+      else if IntEq(i00BC,3) then
+         ret "3"
+      else if IntEq(i00BC,4) then
+         ret "4"
+      else if IntEq(i00BC,5) then
+         ret "5"
+      else if IntEq(i00BC,6) then
+         ret "6"
+      else if IntEq(i00BC,7) then
+         ret "7"
+      else if IntEq(i00BC,8) then
+         ret "8"
+      else if IntEq(i00BC,9) then
+         ret "9"
+      else
+         let _t400C1 =
+            if IntNEq(10,0) then
+               let _t500C2 = IntDiv(i00BC,10) in
+                  ret _t500C2
+            else
+               let _t600C3 = call _mml_fail("Divide by zero") in
+                  ret _t600C3
+         in
+         let _t300C0 = intToString_code010B (intToString010C,_t400C1) in
+         let _t800C5 =
+            if IntNEq(10,0) then
+               let _t900C6 = IntMod(i00BC,10) in
+                  ret _t900C6
+            else
+               let _t1000C7 = call _mml_fail("Remainder by zero") in
+                  ret _t1000C7
+         in
+         let _t700C4 = intToString_code010B (intToString010C,_t800C5) in
+         let _t1100C8 = call _mml_concat(_t300C0,_t700C4) in
+            ret _t1100C8
+   in
+   let intToString00BB = [intToString_code010B] in
+   fun optionToString_code00F9 (aToString00CA) =
+      fun optionToString1_code0107 (optionToString10108,opt00CC) =
+         let aToString0109 = #1(optionToString10108) in
+            case opt00CC of
+            | None => ret "None"
+            | Some(x00CD) =>
+               let cp010A = #0(aToString0109) in
+               let _t1300CF = cp010A (aToString0109,x00CD) in
+               let _t1200CE = call _mml_concat(_t1300CF,")") in
+               let _t1400D0 = call _mml_concat("Some(",_t1200CE) in
+                  ret _t1400D0
+            end
+      in
+      let optionToString100CB = [optionToString1_code0107,aToString00CA] in
+         ret optionToString100CB
+   in
+   let _t1500D2 = StrSize("0") in
+   let ord000D1 =
+      if UIntLt(0,_t1500D2) then
+         let _t1600D3 = StrSub("0",0) in
+            ret _t1600D3
+      else
+         let _t1700D4 = call _mml_fail("Subscript out of bounds") in
+            ret _t1700D4
+   in
+   let _t1800D6 = StrSize("9") in
+   let ord900D5 =
+      if UIntLt(0,_t1800D6) then
+         let _t1900D7 = StrSub("9",0) in
+            ret _t1900D7
+      else
+         let _t2000D8 = call _mml_fail("Subscript out of bounds") in
+            ret _t2000D8
+   in
+   fun charToDigit_code0103 (charToDigit0104,c00DA) =
+      let ord00105 = #0(charToDigit0104) in
+      let ord90106 = #1(charToDigit0104) in
+         if IntLte(ord00105,c00DA) then
+            if IntLte(c00DA,ord90106) then
+               let _t2100DB = IntSub(c00DA,ord00105) in
+               let _t2200DC = Some00B9(_t2100DB) in
+                  ret _t2200DC
+            else
+               ret None
+         else
+            ret None
+   in
+   let charToDigit00D9 = [ord000D1,ord900D5] in
+   fun stringToInt_code00FA (stringToInt00FC,s00DE) =
+      let charToDigit00FD = #0(stringToInt00FC) in
+      let sz00DF = StrSize(s00DE) in
+      fun loop_code00FE (loop00FF,tpl00E1) =
+         let charToDigit0100 = #0(loop00FF) in
+         let s0101 = #1(loop00FF) in
+         let sz0102 = #2(loop00FF) in
+         let pos00E2 = #0(tpl00E1) in
+         let acc00E3 = #1(tpl00E1) in
+            if IntLt(pos00E2,sz0102) then
+               let _t2500E6 = StrSize(s0101) in
+               let _t2400E5 =
+                  if UIntLt(pos00E2,_t2500E6) then
+                     let _t2600E7 = StrSub(s0101,pos00E2) in
+                        ret _t2600E7
+                  else
+                     let _t2700E8 = call _mml_fail("Subscript out of bounds") in
+                        ret _t2700E8
+               in
+               let _t2300E4 = charToDigit_code0103 (charToDigit0100,_t2400E5) in
+                  case _t2300E4 of
+                  | None => ret None
+                  | Some(i00E9) =>
+                     let _t2900EB = IntAdd(pos00E2,1) in
+                     let _t3100ED = IntMul(acc00E3,10) in
+                     let _t3000EC = IntAdd(_t3100ED,i00E9) in
+                     let _t2800EA = [_t2900EB,_t3000EC] in
+                        loop_code00FE (loop00FF,_t2800EA)
+                  end
+            else
+               let _t3200EE = Some00B9(acc00E3) in
+                  ret _t3200EE
+      in
+      let loop00E0 = [charToDigit00FD,s00DE,sz00DF] in
+         if IntLt(0,sz00DF) then
+            let _t3300EF = [0,0] in
+               loop_code00FE (loop00E0,_t3300EF)
+         else
+            ret None
+   in
+   let stringToInt00DD = [charToDigit00D9] in
+   let un00F0 =
+      case arguments00BA of
+      | Cons(s00F2,_00F1) =>
+         let _t3500F5 = optionToString_code00F9 (intToString00BB) in
+         let _t3600F6 = stringToInt_code00FA (stringToInt00DD,s00F2) in
+         let cp00FB = #0(_t3500F5) in
+         let _t3400F4 = cp00FB (_t3500F5,_t3600F6) in
+         let un00F3 = call _mml_print(_t3400F4) in
+         let _t3700F7 = call _mml_print("\n") in
+            ret _t3700F7
+      | Nil =>
+         let _t3800F8 = [] in
+            ret _t3800F8
+      end
+   in ret 0

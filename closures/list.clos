@@ -1,0 +1,149 @@
+program (arguments00DF) =
+   fun intToString_code012B (i00E1) =
+      if IntLt(i00E1,0) then
+         let _t100E3 = IntNeg(i00E1) in
+         let _t000E2 = intToString_code012B (_t100E3) in
+         let _t200E4 = call _mml_concat("-",_t000E2) in
+            ret _t200E4
+      else if IntEq(i00E1,0) then
+         ret "0"
+      else if IntEq(i00E1,1) then
+         ret "1"
+      else if IntEq(i00E1,2) then
+         ret "2"
+      else if IntEq(i00E1,3) then
+         ret "3"
+      else if IntEq(i00E1,4) then
+         ret "4"
+      else if IntEq(i00E1,5) then
+         ret "5"
+      else if IntEq(i00E1,6) then
+         ret "6"
+      else if IntEq(i00E1,7) then
+         ret "7"
+      else if IntEq(i00E1,8) then
+         ret "8"
+      else if IntEq(i00E1,9) then
+         ret "9"
+      else
+         let _t400E6 =
+            if IntNEq(10,0) then
+               let _t500E7 = IntDiv(i00E1,10) in
+                  ret _t500E7
+            else
+               let _t600E8 = call _mml_fail("Divide by zero") in
+                  ret _t600E8
+         in
+         let _t300E5 = intToString_code012B (_t400E6) in
+         let _t800EA =
+            if IntNEq(10,0) then
+               let _t900EB = IntMod(i00E1,10) in
+                  ret _t900EB
+            else
+               let _t1000EC = call _mml_fail("Remainder by zero") in
+                  ret _t1000EC
+         in
+         let _t700E9 = intToString_code012B (_t800EA) in
+         let _t1100ED = call _mml_concat(_t300E5,_t700E9) in
+            ret _t1100ED
+   in
+   fun foldl_code0127 (f00EF) =
+      fun foldl1_code0140 (foldl10141,b00F1) =
+         let f0142 = #1(foldl10141) in
+         fun foldl2_code0143 (foldl20144,l00F3) =
+            let f0145 = #1(foldl20144) in
+            let b0146 = #2(foldl20144) in
+               case l00F3 of
+               | Nil => ret b0146
+               | Cons(hd00F5,tl00F4) =>
+                  let _t1200F6 = foldl_code0127 (f0145) in
+                  let cp0147 = #0(f0145) in
+                  let _t1500F9 = cp0147 (f0145,hd00F5) in
+                  let cp0148 = #0(_t1500F9) in
+                  let _t1400F8 = cp0148 (_t1500F9,b0146) in
+                  let cp0149 = #0(_t1200F6) in
+                  let _t1300F7 = cp0149 (_t1200F6,_t1400F8) in
+                  let cp014A = #0(_t1300F7) in
+                     cp014A (_t1300F7,tl00F4)
+               end
+         in
+         let foldl200F2 = [foldl2_code0143,f0142,b00F1] in
+            ret foldl200F2
+      in
+      let foldl100F0 = [foldl1_code0140,f00EF] in
+         ret foldl100F0
+   in
+   fun rev_code0138 (xs00FB) =
+      fun cons_code013B (cons013C,hd00FD) =
+         fun cons1_code013D (cons1013E,tl00FF) =
+            let hd013F = #1(cons1013E) in
+            let _t160100 = Cons0050(hd013F,tl00FF) in
+               ret _t160100
+         in
+         let cons100FE = [cons1_code013D,hd00FD] in
+            ret cons100FE
+      in
+      let cons00FC = [cons_code013B] in
+      let _t170101 = foldl_code0127 (cons00FC) in
+      let cp0139 = #0(_t170101) in
+      let _t180102 = cp0139 (_t170101,Nil) in
+      let cp013A = #0(_t180102) in
+         cp013A (_t180102,xs00FB)
+   in
+   fun tabulate_code0129 (tpl0104) =
+      let n0105 = #0(tpl0104) in
+      let f0106 = #1(tpl0104) in
+      fun loop_code0133 (loop0134,tpl0108) =
+         let n0135 = #0(loop0134) in
+         let f0136 = #1(loop0134) in
+         let i0109 = #0(tpl0108) in
+         let acc010A = #1(tpl0108) in
+            if IntLte(i0109,n0135) then
+               let _t20010C = IntAdd(i0109,1) in
+               let cp0137 = #0(f0136) in
+               let _t22010E = cp0137 (f0136,i0109) in
+               let _t21010D = Cons0050(_t22010E,acc010A) in
+               let _t19010B = [_t20010C,_t21010D] in
+                  loop_code0133 (loop0134,_t19010B)
+            else
+               rev_code0138 (acc010A)
+      in
+      let loop0107 = [n0105,f0106] in
+         if IntLt(n0105,0) then
+            let _t23010F = call _mml_fail("tabulate: n < 0") in
+               ret _t23010F
+         else
+            let _t240110 = [0,Nil] in
+               loop_code0133 (loop0107,_t240110)
+   in
+   let n0111 = ret 4999 in
+   fun f_code012E (f012F,x0114) =
+      fun f1_code0130 (f10131,y0116) =
+         let x0132 = #1(f10131) in
+         let _t250117 = IntAdd(x0132,y0116) in
+            ret _t250117
+      in
+      let f10115 = [f1_code0130,x0114] in
+         ret f10115
+   in
+   let f0113 = [f_code012E] in
+   fun g_code012C (g012D,i0119) = ret i0119
+ in
+   let g0118 = [g_code012C] in
+   let _t26011A = foldl_code0127 (f0113) in
+   let cp0128 = #0(_t26011A) in
+   let _t27011B = cp0128 (_t26011A,0) in
+   let _t29011D = [n0111,g0118] in
+   let _t28011C = tabulate_code0129 (_t29011D) in
+   let cp012A = #0(_t27011B) in
+   let sum_n0112 = cp012A (_t27011B,_t28011C) in
+   let un011E = call _mml_print("foldl \n") in
+   let un011F = call _mml_print("      (fn x y => x + y)\n") in
+   let un0120 = call _mml_print("      0 (tabulate (") in
+   let _t300122 = intToString_code012B (n0111) in
+   let un0121 = call _mml_print(_t300122) in
+   let un0123 = call _mml_print(", (fn i => i))) = ") in
+   let _t310125 = intToString_code012B (sum_n0112) in
+   let un0124 = call _mml_print(_t310125) in
+   let un0126 = call _mml_print("\n") in
+      ret 0
